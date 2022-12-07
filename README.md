@@ -12,13 +12,13 @@ Data modeling is the process of creating a visual representation of either a who
 Goal is to illustrate types of data used and stored, relationships among these data types, and the ways the data can be grouped and organized and its formats and attributes.  
 
 Data models built around business needs. Rules and requirements defined upfront through feedback from business stakeholders so they can be incorporated into the design of a new system or adapted into an existing one.  
- 
+
 Benefits of data modeling:
 * Provides project scope
 * Acts as documentation
 * Improves performance
 * Reduces data and application errors  
- 
+
 Types of data models: (hierarchy)
 * Conceptual data models:
     * Establish the entities and their relationships
@@ -27,7 +27,7 @@ Types of data models: (hierarchy)
         * Ex. Entity Relationship diagram (ERD), Key-Based model (KB), Fully-Attributed model (FA)
 * Physical data models
     * Describes the database-specific implementation of the data model
- 
+
 Data modeling process:
 * Identify the entities of business importance
 * Identify key attributes of each entity
