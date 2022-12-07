@@ -135,9 +135,9 @@ Denormalization: the process of adding precomputed redundant data to an otherwis
 
 ### 6) Index
 
-Non-clustered index: list of indices where each index points to all the corresponding rows
- 
-Clustered index: list of indices where each index points to a block containing all the corresponding rows (actually reorganizes the data)
+Non-clustered index: list of indices where each index points to all the corresponding rows  
+
+Clustered index: list of indices where each index points to a block containing all the corresponding rows (actually reorganizes the data)  
 
 ## Technologies
 
