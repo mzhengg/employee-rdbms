@@ -10,7 +10,7 @@ A brief overview of important database concepts.
 Data modeling is the process of creating a visual representation of either a whole information system or parts of it to communicate connections between data points and structures.  
 
 Goal is to illustrate types of data used and stored, relationships among these data types, and the ways the data can be grouped and organized and its formats and attributes.  
- 
+
 Data models built around business needs. Rules and requirements defined upfront through feedback from business stakeholders so they can be incorporated into the design of a new system or adapted into an existing one.  
  
 Benefits of data modeling:
