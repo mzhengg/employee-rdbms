@@ -2,7 +2,8 @@
 
 Data modeling is an important job of a Data Engineer. So, in this project, I designed a RDBMS (Relational Database Management System) for employee management applications to practice this skill.
 
-*Technologies:*
+## Technologies
+
 * MySQL
 * Docker
 
@@ -166,3 +167,14 @@ The MYSQL_DATABASE is set to 'WAREHOUSE', which is consistent with the schema de
 *ports* is used to specifify the host port and container port (host:container) so that a connection can be established to this container from within and without. When container ports are mentioned in docker-compose.yml, they will be shared amongst services started by that docker-compose because they are on the same network.  
 
 *volumes* provides the path to the 'database.sql' file so that the database can be imported into the container.  
+
+To check that the database was succesfully containerized, follow these steps:
+1. Open Terminal, navigate to the main folder of this repo
+2. docker compose up
+3. docker exec -it warehouse bash
+4. mysql -u root -p root
+5. show schemas; (should see WAREHOUSE schema)
+6. use WAREHOUSE;
+7. show tables; (should see 6 tables)
+8. docker compose down --volumes --rmi all  
+
