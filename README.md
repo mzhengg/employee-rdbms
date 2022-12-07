@@ -78,7 +78,7 @@ There are a variety of ways to arrange schema objects in the schema models desig
         * Fact table: contains all the primary keys of the dimensional tables and stores quantitative information for analysis
         * Dimensional tables: provide descriptive information for all the quantitative information in the fact table (thus dimensional tables are relatively smaller than fact tables). Commonly used dimensions: people, products, place, and time
 
-<img>
+![alt text](https://upload.wikimedia.org/wikipedia/commons/b/bb/Star-schema.png)
 
 * Snowflake Schema: (variant of Star Schema)
     * Design: contains a fact table at the center connected to a number of associated dimensional tables that have their own sub-dimensional tables
