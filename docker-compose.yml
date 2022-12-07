@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+
+  warehouse:
+    image: mysql:5.7
+    container_name: warehouse
+    restart: always # keeps container running
+    environment:
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - '3306:3306'
+    volumes: # import database
+      - ./containers/warehouse:/docker-entrypoint-initdb.d
+
+  interface:
+    container_name: interface
+    build:
+      dockerfile: ./containers/interface/Dockerfile
+    environment:
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+
