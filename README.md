@@ -141,7 +141,7 @@ Clustered index: list of indices where each index points to a block containing a
 
 ## Data Model
 
-I used an ER (entity relationship) diagram to model and design the relational database. 
+I used an ER (entity relationship) diagram to build a logical model for the relational database.  
 
 ![alt text](https://miro.medium.com/max/1168/1*QkIeA-uwU244QoG0jF3FBg.png)
 
