@@ -13,13 +13,13 @@ Goal is to illustrate types of data used and stored, relationships among these d
 
 Data models built around business needs. Rules and requirements defined upfront through feedback from business stakeholders so they can be incorporated into the design of a new system or adapted into an existing one.  
 
-Benefits of data modeling:
+*Benefits of data modeling:*
 * Provides project scope
 * Acts as documentation
 * Improves performance
 * Reduces data and application errors  
 
-Types of data models: (hierarchy)
+*Types of data models (hierarchy):*
 * Conceptual data models:
     * Establish the entities and their relationships
 * Logical data models
@@ -28,7 +28,7 @@ Types of data models: (hierarchy)
 * Physical data models
     * Describes the database-specific implementation of the data model
 
-Data modeling process:
+*Data modeling process:*
 * Identify the entities of business importance
 * Identify key attributes of each entity
 * Identify relationships among entities
