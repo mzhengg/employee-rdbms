@@ -114,13 +114,14 @@ Compound key: a key made up of two or more foreign keys from different tables
 
 ### 5) Normalization
 
-Partial dependency: when a non-key column in a table is not dependent on the entire primary key
- 
-Functional dependency: when a non-key column in a table is dependent on the entire primary key
- 
-Transitive dependency: when a column is dependent on another column through a dependency (A -> C because A -> B where B -> C) and causes a FD
+Partial dependency: when a non-key column in a table is not dependent on the entire primary key  
+
+Functional dependency: when a non-key column in a table is dependent on the entire primary key  
+
+Transitive dependency: when a column is dependent on another column through a dependency (A -> C because A -> B where B -> C) and causes a FD  
 
 Normalization: the process by which data in a relational database is organized to eliminate data redundancy by removing all model structures that provide multiple ways to know the same fact
+
 * First Normal Form:
     * All column values are atomic
 * Second Normal Form:
@@ -128,8 +129,8 @@ Normalization: the process by which data in a relational database is organized t
     * No partial dependencies, otherwise the column(s) should be moved to another table
 * Third Normal Form:
     * It is in 2NF
-    * No transitive dependencies, otherwise the column(s) should be moved to another table
- 
+    * No transitive dependencies, otherwise the column(s) should be moved to another table  
+
 Denormalization: the process of adding precomputed redundant data to an otherwise normalized relational database to improve read performance of the database
 
 ### 6) Index
