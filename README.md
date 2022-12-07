@@ -38,29 +38,29 @@ Data models built around business needs. Rules and requirements defined upfront 
 
 ### 2) Relational Databases
 
-Relational Database: a type of database that stores and provides access to data points that are related to one another
- 
-RDBMS: The software used to store, manage, query, and retrieve data stored in a relational database
- 
+Relational Database: a type of database that stores and provides access to data points that are related to one another 
+
+RDBMS: The software used to store, manage, query, and retrieve data stored in a relational database  
+
 Data Integrity: having correct data in database (no repeating or incorrect values and broken relationships)
 * Entity integrity:  each row of a table has a unique and non-null primary key
 * Referential integrity: each value in the foreign key must have a matching value in the primary key or it must be null
 * Domain integrity: all data values in each column must be valid (proper data type and length)
- 
+
 Relationships: associations between entities (tables)
 * One-to-one: a record in one table has a connection to a single record in another table
 * One-to-many: a record in one table has connections to multiple records in another table
 * Many-to-many: multiple records in one table have connections with multiple records in another table (incompatible with relational databases)
- 
-Parent tables: contain the primary key
- 
+
+Parent tables: contain the primary key.  
+
 Child tables: contain the foreign key
-A child table always points back at the parent table
- 
-Look-up table: a table that has two columns: "key" and "value". The keys are usually integers or short string codes. The keys are being used by other tables. Thus, we can quickly search data because the lookup keys are connected to all the corresponding rows
- 
-Cardinality: the maximum number of times a row in one table can relate to the rows in another table
- 
+* A child table always points back at the parent table.  
+
+Look-up table: a table that has two columns: "key" and "value". The keys are usually integers or short string codes. The keys are being used by other tables. Thus, we can quickly search data because the lookup keys are connected to all the corresponding rows.  
+
+Cardinality: the maximum number of times a row in one table can relate to the rows in another table  
+
 Modality: the minimum number of times a row in one table can relate to the rows in another table
 
 ### 3) Schemas
