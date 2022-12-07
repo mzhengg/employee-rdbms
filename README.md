@@ -92,25 +92,25 @@ There are a variety of ways to arrange schema objects in the schema models desig
 
 ### 4) Keys
 
-Natural key: a set of attributes that already exist in the table that can be used to make keys (see below)
- 
-Surrogate key: a system generated attribute with no business meaning that can be used to make keys (see below)
- 
-* Super key: a set of attributes (can include unnecessary attributes) that can uniquely identify each row in a table (there can be many Super keys in a table)
- 
+Natural key: a set of attributes that already exist in the table that can be used to make keys (see below)  
+
+Surrogate key: a system generated attribute with no business meaning that can be used to make keys (see below)  
+
+Super key: a set of attributes (can include unnecessary attributes) that can uniquely identify each row in a table (there can be many Super keys in a table)
+
 * Candidate key: a subset of Super keys devoid of any unnecessary attributes that are not important for uniquely identifying each row in a table (there can be many Candidate keys in a table)
- 
-* Primary key: Out of all the Candidate keys, we pick the one that has a minimal, non-null set of attributes that can uniquely identify each row in a table (there can only be one Primary key in a table)
- 
-* Alternate key: Any of the remaining Candidate keys
- 
-* Foreign key: an attribute that is a Primary key in its parent table, but is included as an attribute in the child table to generate a relationship between them (each value in the foreign key must correspond to a value in the primary key otherwise it should be null)
- 
-Simple key: a key made up of one column
- 
-Composite key: a key made up of two or more columns
- 
-Compound key: a key made up of two or more foreign keys from different tables
+
+    * Primary key: Out of all the Candidate keys, we pick the one that has a minimal, non-null set of attributes that can uniquely identify each row in a table (there can only be one Primary key in a table)
+
+    * Alternate key: Any of the remaining Candidate keys
+
+Foreign key: an attribute that is a Primary key in its parent table, but is included as an attribute in the child table to generate a relationship between them (each value in the foreign key must correspond to a value in the primary key otherwise it should be null)  
+
+Simple key: a key made up of one column  
+
+Composite key: a key made up of two or more columns  
+
+Compound key: a key made up of two or more foreign keys from different tables  
 
 ### 5) Normalization
 
