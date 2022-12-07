@@ -83,12 +83,12 @@ There are a variety of ways to arrange schema objects in the schema models desig
 * Snowflake Schema: (variant of Star Schema)
     * Design: contains a fact table at the center connected to a number of associated dimensional tables that have their own sub-dimensional tables
 
-<img>
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Snowflake-schema.png/1200px-Snowflake-schema.png)
 
 * Galaxy Schema:
     * Design: contains two fact tables that share dimensional tables between them and have their own dimensional tables
 
-<img>
+![alt text](https://streamsets.b-cdn.net/wp-content/uploads/Galaxy-Schema.png)
 
 ### 4) Keys
 
