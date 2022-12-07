@@ -64,13 +64,13 @@ Cardinality: the maximum number of times a row in one table can relate to the ro
 Modality: the minimum number of times a row in one table can relate to the rows in another table
 
 ### 3) Schemas
-Structured data: made up of well-defined data types with patterns that make them easily searchable
- 
-Unstructured data: made up of files in various formats, such as videos, photos, texts, audio, and more
- 
-Data engineers collect unstructured data, transform it into structured data, and store it in database management systems (DBMS) to make it available for analysis
- 
-A schema is a collection of database objects
+Structured data: made up of well-defined data types with patterns that make them easily searchable  
+
+Unstructured data: made up of files in various formats, such as videos, photos, texts, audio, and more  
+
+Data engineers collect unstructured data, transform it into structured data, and store it in database management systems (DBMS) to make it available for analysis  
+
+A schema is a collection of database objects  
 
 There are a variety of ways to arrange schema objects in the schema models designed for data warehousing:
 * Star Schema: (the simplest)
@@ -89,9 +89,6 @@ There are a variety of ways to arrange schema objects in the schema models desig
     * Design: contains two fact tables that share dimensional tables between them and have their own dimensional tables
 
 <img>
-
-
-
 
 ### 4) Keys
 
