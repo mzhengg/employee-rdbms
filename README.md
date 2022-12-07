@@ -2,6 +2,10 @@
 
 Data modeling is an important job of a Data Engineer. So, in this project, I designed a RDBMS (Relational Database Management System) for employee management applications to practice this skill.
 
+*Technologies:*
+* MySQL
+* Docker
+
 ## Database Principles
 
 A brief overview of important database concepts.
@@ -144,8 +148,3 @@ Clustered index: list of indices where each index points to a block containing a
 I used an ER (entity relationship) diagram to build a logical model for the relational database.  
 
 ![alt text](https://miro.medium.com/max/1168/1*QkIeA-uwU244QoG0jF3FBg.png)
-
-## Technologies
-
-* MySQL
-* Docker
