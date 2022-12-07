@@ -139,6 +139,12 @@ Non-clustered index: list of indices where each index points to all the correspo
 
 Clustered index: list of indices where each index points to a block containing all the corresponding rows (actually reorganizes the data)  
 
+## Data Model
+
+I used an ER (entity relationship) diagram to model and design the relational database. 
+
+![alt text](https://miro.medium.com/max/1168/1*QkIeA-uwU244QoG0jF3FBg.png)
+
 ## Technologies
 
 * MySQL
