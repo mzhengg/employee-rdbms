@@ -40,6 +40,39 @@ Docker volume: file system mounted on Docker container to preserve data generate
 
 “Docker rule” is to outsource every process to its own container  
 
+## Kubernetes
+
+Kubernetes is a container orchestration tool (used with Docker).  
+
+To use kubectl, the command line utility for Kubernetes, you must login to Docker on the command line.  
+
+* docker login -u *username*
+    * you will then be prompted to type in *password*  
+
+To deploy something in Kubernetes, you must first push the image(s) to a repository (Docker Hub)  
+
+* docker tag source-image:tag new-repo/name
+    * *source-image*: name of local image
+    * *tag*: version
+    * *new-repo*: repo name (username)
+    * *name*: source-image:tag
+* docker push new-repo/name
+
+Now, you need to deploy the image to make a pod, which is the smallest, most basic deployable object in Kubernetes (contains one or more containers):
+* kubectl create deployment *pod name* --image=*new-repo/name*  
+
+To get diagnostic information about all the pods:
+* kubectl describe pods  
+
+To get diagnostic information about a specific pod:
+* kubectl describe pod *pod name*.  
+
+To see all pods currently deployed:
+* kubectl get deployments
+
+To remove a pod:
+* kubectl delete deployment *pod name*
+
 ## Database Principles
 
 A brief overview of important database concepts.
