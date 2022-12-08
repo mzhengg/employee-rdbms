@@ -1,14 +1,17 @@
+import os
+
 import mysql.connector
 from mysql.connector import Error
 
 # login information
-hostname = "localhost"
-database = "Project"
-mysql_user = "admin"
-mysql_password = "admin"
+host = 'warehouse' # find in docker-compose.yml, line 5
+port = '3306' # find in docker-compose.yml, line 13
+user = os.getenv('MYSQL_USER') # get environmental variable
+password = os.environ.get('MYSQL_PASSWORD') # get environmental variable
+database = os.environ.get('MYSQL_DATABASE') # get environmental variable
 
-# mysql connection
-connection = mysql.connector.connect(host=hostname, user=mysql_user, passwd=mysql_password, auth_plugin='mysql_native_password', database=database)
+# establish connection to mysql database
+connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
 
 def interface():
     i = 1

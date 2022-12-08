@@ -1,11 +1,12 @@
 # Employee Database Management System
 
-Data modeling is an important job of a Data Engineer. So, in this project, I designed a RDBMS (Relational Database Management System) for employee management applications to practice this skill.
+Data modeling is an important job of a Data Engineer. So, in this project, I designed a RDBMS (Relational Database Management System) for employee management applications to practice this skill. The project is broken into 2 parts. The first part is building the database that will house all the data. The second part is designing the interface to interact with the database.
 
 ## Technologies
 
 * MySQL
 * Docker
+* Python (mysql-connector-python)
 
 ## Database Principles
 
@@ -154,13 +155,15 @@ I used an ER (entity relationship) diagram to build a logical model for the rela
 
 The database was created in MySQL and saved as a .sql file, called 'database.sql',  in ./containers/warehouse/. It was containerized with a docker-compose.yml file in order to isolate the database from the local system and ensure reproducibility on other systems as long as they have Docker installed.  
 
+### Process
+
 The database is stored in the container named *warehouse*.  
 
-A MySQL base *image* (mysql:5.7) was used to build the container. 
+A MySQL base *image* (mysql) was used to build the container. 
 
 *restart* was defined to 'always' to ensure the container continuously runs.  
 
-Several important MySQL parameters were passed into the container from environmental variables defined in the .env file of this repository. The .env file is a hidden file that defines environmental variables that can be used by the scripts in this repo. For the purposes of this project, the MYSQL_USER and MYSQL_PASSWORD were set to 'admin' and the MYSQL_ROOT_PASSWORD was set to 'root'. Please note that the passwords that were used are not secure and in a real-life application, stronger passwords should be used to increase security.  
+Several important MySQL parameters were passed into the container from environmental variables defined in the .env file of this repository. The .env file is a hidden file that defines environmental variables that can be used by the scripts in this repo. For the purposes of this project, the MYSQL_USER, MYSQL_PASSWORD, and MYSQL_ROOT_PASSWORD were set to 'root'. Please note that the passwords that were used are not secure and in a real-life application, stronger passwords should be used to increase security.
 
 The MYSQL_DATABASE is set to 'WAREHOUSE', which is consistent with the schema defined in the 'database.sql' file. It is important that the schema, or database, is the same or the database will not be succesfully built.  
 
@@ -178,3 +181,10 @@ To check that the database was succesfully containerized, follow these steps:
 7. show tables; (should see 6 tables)
 8. docker compose down --volumes --rmi all  
 
+## How the Interface Works
+
+The interface was created in Python and can be located in ./containers/interface/ as 'interface.py'. It was containerized using a docker-compose.yml and Dockerfile to ensure reproducibility of the project, manage python dependencies, and connect the interface to the database via a Docker network.  
+
+### Process
+
+The Dockerfile uses a Python base image. It starts by creating a directory called 'main', which will serve as the primary working directory. The 'interface.py' and 'requirements.txt' files are copied into the container. All the Python dependencies listed in the 'requirements.txt' are then installed via pip. Finally, an ENTRYPOINT instruction is executed to keep the container running so that a user can access the interface via the container.
