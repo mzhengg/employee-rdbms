@@ -289,3 +289,6 @@ To check that the interface was successfully containerized, follow these steps:
 3. docker exec -it interface bash
 4. python3 interface.py (should see the interface menu)
 8. docker compose down --volumes --rmi all  
+
+Record locking is the technique of preventing simultaneous access to data in a database, to prevent inconsistent results. In MySQL, record locking can be used by including a FOR UPDATE statement at the end of the query. Upon commiting the execution of the query statement to the database, the record locking is then lifted.
+In this project, simultaneous access shouldn't be a concern. But record locking is an important technique to utilize when building a RDBMS to ensure data integrity. Therefore, record locking was used in this project to practice this concept.
