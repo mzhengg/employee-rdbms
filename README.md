@@ -267,4 +267,25 @@ For a while, I had to keep re-building the images and re-running the containers 
 3. apt-get install vim
 4. vim interface.py  
 
-Elaborate on record locking and interface functions...  
+Now that a connection has been established, an interface was built and 11 functions were implemented so that a user can interact with the database. The interface is a simple command line based interface made in Python. There is certainly room to make a GUI based interface in the future.  
+
+Here are the functions that the interface offers:
+* Add a new employee
+* View a current employee's information
+* Modify a current employee's information
+* Remove an employee
+* Add a dependent to an employee
+* Remove a dependent from an employee
+* Add a new department
+* View a current department's information
+* Remove an existing department
+* Add a new department location to a department
+* Remove a department location from a current department
+
+To check that the interface was successfully containerized, follow these steps:  
+
+1. Open Terminal, navigate to the main folder of this repo
+2. docker compose up
+3. docker exec -it interface bash
+4. python3 interface.py (should see the interface menu)
+8. docker compose down --volumes --rmi all  
