@@ -5,7 +5,6 @@ execute:
 
 # access the interface
 	docker exec -it interface bash
-	python3 interface.py
 
 # destroy the RDBMS
 unexecute:
