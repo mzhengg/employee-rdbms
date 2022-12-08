@@ -42,7 +42,7 @@ Docker volume: file system mounted on Docker container to preserve data generate
 
 “Docker rule” is to outsource every process to its own container  
 
-## Kubernetes
+## Overview of Kubernetes
 
 Kubernetes is a container orchestration tool (used with Docker).  
 
@@ -267,7 +267,4 @@ For a while, I had to keep re-building the images and re-running the containers 
 3. apt-get install vim
 4. vim interface.py  
 
-Elaborate of record locking and interface functions...  
-
-## Container Orchestration
-
+Elaborate on record locking and interface functions...  
