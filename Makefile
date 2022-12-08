@@ -11,4 +11,3 @@ execute:
 # destroys the RDBMS
 unexecute:
 	kubectl delete deployment eRDBMS
-
