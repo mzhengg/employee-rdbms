@@ -2,6 +2,8 @@
 
 Data modeling is an important job of a Data Engineer. So, in this project, I designed a RDBMS (Relational Database Management System) for employee management applications to practice this skill. The project is broken into 2 parts. The first part is building the database that will house all the data. The second part is designing the interface to interact with the database.
 
+To launch this application, go to the 'Makefile' and execute each command in order.
+
 ## Technologies
 
 * MySQL
