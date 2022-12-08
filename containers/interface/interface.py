@@ -300,8 +300,7 @@ def remove_employee():
                 cursor.execute("DELETE FROM EMPLOYEE WHERE SSN='%s'" % (ssn))
                 print("Employee successfully removed!")
 
-            except Error as err:
-                print(f"Error: '{err}'")
+            except:
                 print("Please remove the dependents in the DEPENDENT table first!")
 
     except:
@@ -313,44 +312,49 @@ def remove_employee():
 def add_dependent():
     cursor = connection.cursor()
 
-    ssn = input("Enter Employee SSN: ")
+    ssn = input("Enter employee SSN: ")
 
     # check if employee ssn exists
-    cursor.execute("SELECT * FROM Employee WHERE Ssn='%s'", ssn)
-    emp = cursor.fetchall()
-    if len(emp) == 0:
-        return print("This employee does not exist!")
+    cursor.execute("SELECT * FROM EMPLOYEE WHERE SSN='%s'", ssn)
+    employee = cursor.fetchall()
 
-    # selects all dependents assosicated with that ssn and lock the row
-    cursor.execute("SELECT * FROM Dependent WHERE Essn='%s' FOR UPDATE" % (ssn))
-    dep = cursor.fetchall()
+    if len(employee) == 0:
+        return print("This employee doesn't exist!")
+
+    # get all dependents assosicated with the employee and lock the record
+    cursor.execute("SELECT * FROM DEPENDENT WHERE ESSN='%s' FOR UPDATE" % (ssn))
+    dependents = cursor.fetchall()
     
-    if len(dep) == 0:
-        return print("This employee does not have any dependents!")
+    if len(dependents) == 0:
+        return print("This employee doesn't have any dependents!")
+
     else:
         print("Dependent information: ")
-        for t in dep:
-            print("Name: " + t[1])
-            print("Sex: " + t[2])
-            print("Birthdate: " + str(t[3]))
-            print("Relationship: " + t[4])
+
+        for d in dependents:
+            print("Name: " + d[1])
+            print("Sex: " + d[2])
+            print("Birthdate: " + str(d[3]))
+            print("Relationship: " + d[4])
             print()
 
-    # adds new dependent information to dependent table
-    dep_name = input("Enter the dependent's first name: ")
+    # get new dependent information
+    dependent_name = input("Enter the dependent's first name: ")
     sex = input("Enter the dependent's sex: ")
     bdate = input("Enter the dependent's birthdate: (YYYY-MM-DD) ")
     relationship = input("Enter the dependent's relationship to the employee: ")
     
-    data = (ssn, dep_name, sex, bdate, relationship)
-    # check if the dependent already exists in the table
-    cursor.execute("SELECT * FROM Dependent WHERE Essn='%s' AND Dependent_name='%s' AND Sex='%s' AND Bdate='%s' AND Relationship='%s'" % (data))
+    data = (ssn, dependent_name, sex, bdate, relationship)
+
+    # check if the dependent already exists in DEPENDENT table
+    cursor.execute("SELECT * FROM DEPENDENT WHERE ESSN='%s' AND DEPENDENT_NAME='%s' AND SEX='%s' AND BDATE='%s' AND RELATIONSHIP='%s'" % (data))
 
     if len(cursor.fetchall()) > 0:
         return print("This dependent already exists in the table!")
+
     else:
-        # since they are not in the table, add the dependent to the table
-        cursor.execute("INSERT INTO Dependent VALUES (%s, %s, %s, %s, %s)", data)
+        # not in table, add the new dependent to DEPENDENT table
+        cursor.execute("INSERT INTO DEPENDENT VALUES (%s, %s, %s, %s, %s)", data)
         print("Dependent successfully added!")
 
     connection.commit()
@@ -361,30 +365,34 @@ def remove_dependent():
 
     ssn = input("Enter employee SSN: ")
 
-    # selects all dependents assosicated with that ssn
-    cursor.execute("SELECT * FROM Dependent WHERE Essn='%s' FOR UPDATE" % (ssn))
-    dep = cursor.fetchall()
+    # get all dependents assosicated with the employee and lock the record
+    cursor.execute("SELECT * FROM DEPENDENT WHERE ESSN='%s' FOR UPDATE" % (ssn))
+    dependents = cursor.fetchall()
 
-    if len(dep) == 0:
-        return print("This employee does not have any dependents!")
+    if len(dependents) == 0:
+        return print("This employee doesn't have any dependents!")
+
     else:
         print("Dependent information: ")
-        for t in dep:
-            print("Name: " + t[1])
-            print("Sex: " + t[2])
-            print("Birthdate: " + str(t[3]))
-            print("Relationship: " + t[4])
+        
+        for d in dependents:
+            print("Name: " + d[1])
+            print("Sex: " + d[2])
+            print("Birthdate: " + str(d[3]))
+            print("Relationship: " + d[4])
             print()
 
-    dep_name = input("Enter the first name of the dependent to be removed: ")
+    dependent_fname = input("Enter the first name of the dependent to be removed: ")
 
     # check if dependent exists
-    cursor.execute("SELECT * FROM Dependent WHERE Essn = '%s' AND Dependent_name = '%s'" % (ssn, dep_name))
+    cursor.execute("SELECT * FROM DEPENDENT WHERE ESSN = '%s' AND DEPENDENT_NAME = '%s'" % (ssn, dependent_fname))
+    
     if len(cursor.fetchall()) == 0:
-        return print("This dependent does not exist in the table!")
+        return print("This dependent doesn't exist in the table!")
+
     else:
-        # delete the dependent from the dependent table
-        cursor.execute("DELETE FROM Dependent WHERE Dependent_name = '%s'" % (dep_name))
+        # delete the dependent from the DEPENDENT table
+        cursor.execute("DELETE FROM DEPENDENT WHERE DEPENDENT_NAME = '%s'" % (dependent_fname))
         print("Dependent successfully removed!")
 
     connection.commit()
@@ -393,15 +401,17 @@ def remove_dependent():
 def add_department():
     cursor = connection.cursor()
 
-    dname = input("Enter the department name: ")
-    dnumber = input("Enter the department number: ")
+    department_name = input("Enter the department name: ")
+    department_number = input("Enter the department number: ")
     mgr_ssn = input("Enter the manager SSN: ")
     mgr_start_date = input("Enter the manager start date: (YYYY-MM-DD) ")
     
     try:
-        data = (dname, dnumber, mgr_ssn, mgr_start_date)
-        cursor.execute("INSERT INTO Department VALUES ('%s','%s','%s','%s')" % (data))
+        data = (department_name, department_number, mgr_ssn, mgr_start_date)
+        cursor.execute("INSERT INTO DEPARTMENT VALUES ('%s','%s','%s','%s')" % (data))
+        
         print("Department successfully added!")
+
     except Error as err:
         print(f"Error: '{err}'")
 
@@ -411,30 +421,28 @@ def add_department():
 def view_department():
     cursor = connection.cursor()
 
-    dnumber = input("Enter department number: ")
+    department_number = input("Enter department number: ")
 
-    # select department information with the given department number
-    cursor.execute("SELECT Dname, Mgr_ssn FROM Department WHERE Dnumber = '%s'" % (dnumber))
+    # get department information from the department number
+    cursor.execute("SELECT DNAME, MGR_SSN FROM DEPARTMENT WHERE DNUMBER = '%s'" % (department_number))
     dept_info = cursor.fetchall()
     
     if len(dept_info) == 0:
         return print("This is an invalid department number!")
     
-    # select the department supervisor's name 
+    # get the department supervisor's name 
     mgr_ssn = dept_info[0][1]
-    cursor.execute("SELECT Fname, Minit, Lname FROM Employee WHERE Ssn = '%s'" % (mgr_ssn))
+    cursor.execute("SELECT FNAME, MINIT, LNAME FROM EMPLOYEE WHERE SSN = '%s'" % (mgr_ssn))
     mgr_info = cursor.fetchall()
 
-    # statement the location(s) of that department
-    cursor.execute("SELECT Dlocation FROM Dept_locations WHERE Dnumber = '%s'" % (dnumber))
+    # get the location(s) of the department
+    cursor.execute("SELECT DLOCATION FROM DEPT_LOCATIONS WHERE DNUMBER = '%s'" % (department_number))
     dept_loc = cursor.fetchall()
 
-    # make it look nicer
-    print()
     print("Department information: ")
     print("Department: " + dept_info[0][0])
     print("Department manager: " + " ".join(mgr_info[0]))
-    print("Department location(s): " + " ".join(dept_loc[0]))
+    print("Department location(s): " + ", ".join(dept_loc[0]))
 
     connection.commit()
     cursor.close()
@@ -442,32 +450,35 @@ def view_department():
 def remove_department():
     cursor = connection.cursor()
 
-    dnumber = input("Enter department number: ")
+    department_number = input("Enter department number: ")
 
     try:
-        # retrieve information about the department with that department number and lock the row
-        cursor.execute("SELECT * FROM Department WHERE Dnumber='%s' FOR UPDATE" % (dnumber))
-        employee_info = cursor.fetchall()
+        # get department information from the department number and lock the record
+        cursor.execute("SELECT * FROM DEPARTMENT WHERE DNUMBER='%s' FOR UPDATE" % (department_number))
+        dept_info = cursor.fetchall()
+
         print("Department information: ")
-        print("Department name: " + employee_info[0][0])
-        print("Department number: " + str(employee_info[0][1]))
-        print("Manager SSN: " + employee_info[0][2])
-        print("Manager start date (YYYY-MM-DD): " + str(employee_info[0][3]))
+        print("Department name: " + dept_info[0][0])
+        print("Department number: " + str(dept_info[0][1]))
+        print("Manager SSN: " + dept_info[0][2])
+        print("Manager start date: " + str(dept_info[0][3]))
 
-        conf = input("Are you sure you want to delete this department? ")
+        answer = input("Are you sure you want to delete this department? ")
 
-        if conf == "No":
+        if answer == "No":
             pass
+
         else:
             try:
-                # delete the department with that department number
-                cursor.execute("DELETE FROM Department WHERE Dnumber='%s'" % (dnumber))
+                # delete the department with the department number
+                cursor.execute("DELETE FROM DEPARTMENT WHERE DNUMBER='%s'" % (department_number))
                 print("Department successfully removed!")
-            except Error as err:
-                print(f"Error: '{err}'")
-                print("Please remove the necessary dependencies first!")
+
+            except:
+                print("Please remove the projects in the PROJECT table and the department locations in the DEPT_LOCATIONS table first!")
+
     except:
-        return print("This department number does not exist!")
+        return print("This department number doesn't exist!")
 
     connection.commit()
     cursor.close()
@@ -475,28 +486,27 @@ def remove_department():
 def add_department_location():
     cursor = connection.cursor()
     
-    dnum = input("Enter department number? ")
+    dnum = input("Enter department number: ")
 
-    # select all department locations for that department number and lock the row
-    cursor.execute("SELECT Dlocation FROM Dept_locations WHERE Dnumber='%s' FOR UPDATE" % (dnum))
-    loc_info = cursor.fetchall()
+    # get department locations for the department number and lock the record
+    cursor.execute("SELECT DLOCATION FROM DEPT_LOCATIONS WHERE DNUMBER='%s' FOR UPDATE" % (dnum))
+    dept_locations = cursor.fetchall()
 
-    if len(loc_info) == 0:
-        return print("This department number does not exist!")
+    if len(dept_locations) == 0:
+        return print("This department number doesn't exist!")
+
     else:
-        loc_list = [loc[0] for loc in loc_info]
-        print("Department locations: " + ", ".join(loc_list))
+        dept_locations_list = [loc[0] for loc in dept_locations]
+        print("Department is currently located in these locations: " + ", ".join(dept_locations_list))
 
-    new_loc = input("Enter new department location: ")
+    new_dept_location = input("Enter new department location: ")
 
     try:
-        # insert new location for that department number into table
-        cursor.execute("INSERT INTO Dept_locations VALUES ('%s', '%s')" % (dnum, new_loc))
-        connection.commit()
-        cursor.close()
-        return print("Department location successfully added!")
-    except Error as err:
-        print(f"Error: '{err}'")
+        # add new department location for the department number into DEPT_LOCATIONS table
+        cursor.execute("INSERT INTO DEPT_LOCATIONS VALUES ('%s', '%s')" % (dnum, new_dept_location))
+        print("Department location successfully added!")
+
+    except:
         print("This department location already exists!")
     
     connection.commit()
@@ -505,30 +515,32 @@ def add_department_location():
 def remove_department_location():
     cursor = connection.cursor()
 
-    dno = input("Enter the department number: ")
+    dept_number = input("Enter the department number: ")
 
-    # select all department locations for that department number and lock the row(s)
-    cursor.execute("SELECT Dlocation FROM Dept_locations WHERE Dnumber='%s' FOR UPDATE" % (dno))
-    dept_loc = cursor.fetchall()
+    # get department locations for the department number and lock the record
+    cursor.execute("SELECT DLOCATION FROM DEPT_LOCATIONS WHERE DNUMBER='%s' FOR UPDATE" % (dept_number))
+    dept_locations = cursor.fetchall()
 
-    if len(dept_loc) == 0:
-        return print("This department number does not exist!")
+    if len(dept_locations) == 0:
+        return print("This department number doesn't exist!")
+
     else:
-        dept_loc_list = [loc[0] for loc in dept_loc]
-        print("Department locations: " +  ", ".join(dept_loc_list))
+        dept_locations_list = [loc[0] for loc in dept_locations]
+        print("Department is currently located in these locations: " +  ", ".join(dept_locations_list))
         
-        rem_location = input("Which location do you want to remove? ")
+        dept_location_to_remove = input("Enter department location to remove: ")
 
-        if rem_location in dept_loc_list:
-            # delete the specified department location from that department
-            cursor.execute("DELETE FROM Dept_locations WHERE Dlocation ='%s' and Dnumber = '%s'" % (rem_location, dno))
+        if dept_location_to_remove in dept_locations_list:
+            # delete the department location from the DEPT_LOCATIONS table
+            cursor.execute("DELETE FROM DEPT_LOCATIONS WHERE DLOCATION ='%s' and DNUMBER = '%s'" % (dept_location_to_remove, dept_number))
             print("Department location successfully removed!")
+
         else:
-            print("This location is not a valid entry!")
+            print("This department location is not a valid entry!")
 
     connection.commit()
     cursor.close()
 
 if __name__ == '__main__':
-    database = interface()
+    interface()
     connection.close()
