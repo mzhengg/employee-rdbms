@@ -51,7 +51,7 @@ To use kubectl, the command line utility for Kubernetes, you must login to Docke
 
 To deploy something in Kubernetes, you must first push the image(s) to a repository (Docker Hub)  
 
-* docker tag source-image:tag new-repo/name
+* docker tag *source-image*:*tag* *new-repo*/*name*
     * *source-image*: name of local image
     * *tag*: version
     * *new-repo*: repo name (username)
