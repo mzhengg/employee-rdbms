@@ -10,6 +10,9 @@ Data modeling is an important job of a Data Engineer. So, in this project, I des
 * Python (mysql-connector-python)
 
 ## Overview of Docker
+
+Docker is a platform that enables developers to build, deploy, run, update, and manage containers.  
+
 Containers: package of software that includes everything needed to run an application: code, dependencies, etc.  
 
 Containers are isolated from each other and can be ran in different environments (Windows, macOS, GCP, etc.)  
