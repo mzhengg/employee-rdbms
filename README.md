@@ -61,19 +61,19 @@ To deploy something in Kubernetes, you must first push the image(s) to a reposit
 * docker push new-repo/name
 
 Now, you need to deploy the image to make a pod, which is the smallest, most basic deployable object in Kubernetes (contains one or more containers):
-* kubectl create deployment *pod name* --image=*new-repo/name*  
+* kubectl create deployment *pod-name* --image=*new-repo/name*  
 
 To get diagnostic information about all the pods:
 * kubectl describe pods  
 
 To get diagnostic information about a specific pod:
-* kubectl describe pod *pod name*.  
+* kubectl describe pod *pod-name*.  
 
 To see all pods currently deployed:
 * kubectl get deployments
 
 To remove a pod:
-* kubectl delete deployment *pod name*
+* kubectl delete deployment *pod-name*  
 
 ## Database Principles
 
