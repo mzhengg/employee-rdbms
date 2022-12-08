@@ -3,7 +3,7 @@ version: '3'
 services:
 
   warehouse:
-    image: mysql
+    image: mysql:latest
     container_name: warehouse
     restart: always # keeps container running
     environment:

@@ -1,13 +1,13 @@
-# executes all commands necessary to launch the RDBMS
+# execute all commands necessary to launch the RDBMS
 execute:
-	docker login
+# build images and run containers
+	docker compose up -d
 
-	docker tag eRDBMS:latest mikaelzheng/eRDBMS:latest
+# access the interface
+	docker exec -it interface bash
+	python3 interface.py
 
-	docker push mikaelzheng/eRDBMS:latest
-
-	kubectl create deployment eRDBMS --image=mikaelzheng/eRDBMS:latest
-
-# destroys the RDBMS
+# destroy the RDBMS
 unexecute:
-	kubectl delete deployment eRDBMS
+# stop containers and delete images
+	docker compose down --volumes --rmi all
