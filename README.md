@@ -8,6 +8,8 @@ To launch this application, follow these steps:
 2. python3 interface.py (database takes ~20 seconds to bootup)
 3. make unexecute (destroys the RDBMS)
 
+The database has been populated with dummy data. So, feel free to experiment with the interface!
+
 *Please note that any changes made in the database will be lost when the container is shut down and started again.*
 
 ## Technologies
