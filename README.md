@@ -192,6 +192,33 @@ I used an ER (entity relationship) diagram to build a logical model for the rela
 
 ![alt text](https://miro.medium.com/max/1168/1*QkIeA-uwU244QoG0jF3FBg.png)
 
+## Database Design
+
+The EMPLOYEE table contains the following variables with their corresponding data types: FNAME (VARCHAR-15), MINIT (CHAR), LNAME (VARCHAR-15), SSN(CHAR-9), BDATE (YYYY-MM-DD), ADDRESS (VARCHAR-30), SEX (CHAR), SALARY (DECIMAL-10,2), SUPER_SSN (CHAR-9), DNO (INT).
+* Primary key: SSN  
+
+The DEPARTMENT table contains the following variables with their corresponding data types: DNAME (VARCHAR-15), DNUMBER (INT), MGR_SSN (CHAR-9), MGR_START_DATE (YYYY-MM-DD).
+* Primary key: DNUMBER
+* Unique: DNAME
+* Foreign key: MGR_SSN references SSN in EMPLOYEE  
+
+The DEPT_LOCATIONS table contains the followung variables with their corresponding data types: DNUMBER (INT), DLOCATION (VARCHAR-15)
+* Primary key: DNUMBER, DLOCATION
+* Foreign key: DNUMBER references DNUMBER in DEPARTMENT  
+
+The PROJECT table contains the following variables with their corresponding data types: PNAME (VARCHAR-15), PNUMBER (INT), PLOCATION (VARCHAR-15), DNUM (INT)
+* Primary key: PNUMBER
+* Unique: PNAME
+* Foreign key: DNUM references DNUMBER in DEPARTMENT  
+
+The WORKS_ON table contains the followung variables with their corresponding data types: ESSN (CHAR-9), PNO (INT), HOURS (DECIMAL-3,1)
+* Primary key: ESSN, PNO
+* Foreign key: ESSN references SSN in EMPLOYEE, PNO references PNUMBER in PROJECT  
+
+The DEPENDENT table contains the following variables with their corresponding data types: ESSN (CHAR-9), DEPENDENT_NAME (VARCHAR-15), SEX (CHAR), BDATE (YYYY-MM-DD), RELATIONSHIP (VARCHAR-8)
+* Primary key: ESSN, DEPENDENT_NAME
+* Foreign key: ESSN references SSN in EMPLOYEE
+
 ## How the Database Works
 
 The database was created in MySQL and saved as a .sql file, called 'database.sql',  in ./containers/warehouse/. It was containerized with a docker-compose.yml file in order to isolate the database from the local system and ensure reproducibility on other systems as long as they have Docker installed.  
