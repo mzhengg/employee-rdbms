@@ -370,3 +370,32 @@ docker compose down --volumes --rmi all
 ```  
 
 Record locking is the technique of preventing simultaneous access to data in a database, to prevent inconsistent results. In MySQL, record locking can be used by including a `FOR UPDATE` statement at the end of the query. Upon commiting the execution of the query statement to the database, the record locking is then lifted. In this project, simultaneous access shouldn't be a concern. But record locking is an important technique to utilize when building a RDBMS to ensure data integrity. Therefore, record locking was used in this project to practice this concept.
+
+## How the Workflow Orchestrator Works
+
+Every week, Airflow will insert 10 employees into the database to simulate a live, production RDBMS where new employees are being hired.
+
+### Setup
+
+- In the main directory, make a folder called `airflow` and run this command:
+```bash
+curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.5.0/docker-compose.yaml'
+```
+
+- Initialize the database
+```bash
+docker compose up airflow-init
+```
+
+- Connect the Airflow DAG to the Database using a Docker network:
+
+    - Create a network with the name `network` in the `docker-compose.yml` file located in the main directory:
+
+        - Add the following below `services`:
+        ```bash
+        networks:
+            proxynet:
+                name: network
+        ```
+
+    
