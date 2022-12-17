@@ -421,14 +421,33 @@ docker compose up airflow-init
     ```bash
     FROM apache/airflow:2.2.3
 
-    ENV AIRFLOW_HOME=/opt/airflow
-
     USER root
 
     RUN apt-get update
 
     COPY requirements.txt .
     RUN pip install -r requirements.txt
-
-    WORKDIR $AIRFLOW_HOME
     ```
+
+    - Go to the `docker-compose.yml` file and add the following:
+    ```bash
+    build:
+        dockerfile: ./Dockerfile
+    ```
+
+- Create the DAG:
+
+    - All connection information will be imported via environmental variables in the `.env` folder
+    - `data_generator` function will create new employees to insert into the database
+    - `insert_to_db` function will perform the insertion of data into the database
+
+- Run the DAG:
+
+    - Start all Airflow services by going to the `airflow` directory and entering the following:
+    ```bash
+    docker compose up
+    ```
+
+    - Airflow Webserver UI will be accessible at: http://localhost:8080/. Username = `airflow` and Password = `airflow`
+
+    - 
