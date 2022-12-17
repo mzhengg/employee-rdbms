@@ -397,5 +397,15 @@ docker compose up airflow-init
             proxynet:
                 name: network
         ```
+    
+    - Now add the following to the `docker-compose.yml` file in the `airflow` directory:
+
+        - Enter the following below `services`:
+        ```bash
+        networks:
+            my-proxy-net:
+                external:
+                    name: network
+        ```
 
     

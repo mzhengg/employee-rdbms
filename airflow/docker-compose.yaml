@@ -274,5 +274,10 @@ services:
       airflow-init:
         condition: service_completed_successfully
 
+networks:
+  my-proxy-net:
+    external:
+      name: network
+
 volumes:
   postgres-db-volume:
