@@ -20,3 +20,167 @@ AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-04T00:00:00+00:00
 [2022-12-17 05:32:07,713] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=scheduler_dag, task_id=insert_to_db_task, execution_date=20221204T000000, start_date=20221217T053207, end_date=20221217T053207
 [2022-12-17 05:32:07,777] {local_task_job.py:154} INFO - Task exited with return code 0
 [2022-12-17 05:32:07,858] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-12-17 15:22:16,448] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.insert_to_db_task scheduled__2022-12-04T00:00:00+00:00 [queued]>
+[2022-12-17 15:22:16,493] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.insert_to_db_task scheduled__2022-12-04T00:00:00+00:00 [queued]>
+[2022-12-17 15:22:16,494] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 15:22:16,495] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-12-17 15:22:16,496] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 15:22:16,543] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): insert_to_db_task> on 2022-12-04 00:00:00+00:00
+[2022-12-17 15:22:16,550] {standard_task_runner.py:52} INFO - Started process 246 to run task
+[2022-12-17 15:22:16,561] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'scheduler_dag', 'insert_to_db_task', 'scheduled__2022-12-04T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/scheduler.py', '--cfg-path', '/tmp/tmp_dz3b_uc', '--error-file', '/tmp/tmp7kwcs4x1']
+[2022-12-17 15:22:16,568] {standard_task_runner.py:77} INFO - Job 4: Subtask insert_to_db_task
+[2022-12-17 15:22:16,721] {logging_mixin.py:109} INFO - Running <TaskInstance: scheduler_dag.insert_to_db_task scheduled__2022-12-04T00:00:00+00:00 [running]> on host 6661800004c3
+[2022-12-17 15:22:16,873] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scheduler_dag
+AIRFLOW_CTX_TASK_ID=insert_to_db_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-04T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-04T00:00:00+00:00
+[2022-12-17 15:22:16,883] {python.py:175} INFO - Done. Returned value was: None
+[2022-12-17 15:22:16,916] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=scheduler_dag, task_id=insert_to_db_task, execution_date=20221204T000000, start_date=20221217T152216, end_date=20221217T152216
+[2022-12-17 15:22:16,975] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-12-17 15:22:17,055] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-12-17 15:34:07,481] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.insert_to_db_task scheduled__2022-12-04T00:00:00+00:00 [queued]>
+[2022-12-17 15:34:07,518] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.insert_to_db_task scheduled__2022-12-04T00:00:00+00:00 [queued]>
+[2022-12-17 15:34:07,519] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 15:34:07,520] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-12-17 15:34:07,521] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 15:34:07,559] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): insert_to_db_task> on 2022-12-04 00:00:00+00:00
+[2022-12-17 15:34:07,564] {standard_task_runner.py:52} INFO - Started process 292 to run task
+[2022-12-17 15:34:07,572] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'scheduler_dag', 'insert_to_db_task', 'scheduled__2022-12-04T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/scheduler.py', '--cfg-path', '/tmp/tmp8s1a5nn9', '--error-file', '/tmp/tmpas8ri5fo']
+[2022-12-17 15:34:07,574] {standard_task_runner.py:77} INFO - Job 4: Subtask insert_to_db_task
+[2022-12-17 15:34:07,696] {logging_mixin.py:109} INFO - Running <TaskInstance: scheduler_dag.insert_to_db_task scheduled__2022-12-04T00:00:00+00:00 [running]> on host 1716a21dddec
+[2022-12-17 15:34:07,823] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scheduler_dag
+AIRFLOW_CTX_TASK_ID=insert_to_db_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-04T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-04T00:00:00+00:00
+[2022-12-17 15:34:07,831] {python.py:175} INFO - Done. Returned value was: None
+[2022-12-17 15:34:07,862] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=scheduler_dag, task_id=insert_to_db_task, execution_date=20221204T000000, start_date=20221217T153407, end_date=20221217T153407
+[2022-12-17 15:34:07,948] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-12-17 15:34:08,023] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-12-17 15:51:19,316] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.insert_to_db_task scheduled__2022-12-04T00:00:00+00:00 [queued]>
+[2022-12-17 15:51:19,355] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.insert_to_db_task scheduled__2022-12-04T00:00:00+00:00 [queued]>
+[2022-12-17 15:51:19,356] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 15:51:19,357] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-12-17 15:51:19,359] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 15:51:19,404] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): insert_to_db_task> on 2022-12-04 00:00:00+00:00
+[2022-12-17 15:51:19,410] {standard_task_runner.py:52} INFO - Started process 292 to run task
+[2022-12-17 15:51:19,424] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'scheduler_dag', 'insert_to_db_task', 'scheduled__2022-12-04T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/scheduler.py', '--cfg-path', '/tmp/tmpmj77oogg', '--error-file', '/tmp/tmp8q2lu6n8']
+[2022-12-17 15:51:19,426] {standard_task_runner.py:77} INFO - Job 3: Subtask insert_to_db_task
+[2022-12-17 15:51:19,556] {logging_mixin.py:109} INFO - Running <TaskInstance: scheduler_dag.insert_to_db_task scheduled__2022-12-04T00:00:00+00:00 [running]> on host 4ba96f281ae5
+[2022-12-17 15:51:19,751] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scheduler_dag
+AIRFLOW_CTX_TASK_ID=insert_to_db_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-04T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-04T00:00:00+00:00
+[2022-12-17 15:51:19,758] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '817949619', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 15:51:19,762] {taskinstance.py:1700} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 519, in cmd_query
+    query_attrs=self._query_attrs)
+_mysql_connector.MySQLInterfaceError: No database selected
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/scheduler.py", line 59, in insert_to_db
+    cursor.execute("INSERT INTO EMPLOYEE VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/cursor_cext.py", line 271, in execute
+    raw_as_string=self._raw_as_string)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 522, in cmd_query
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.ProgrammingError: 1046 (3D000): No database selected
+[2022-12-17 15:51:19,808] {taskinstance.py:1277} INFO - Marking task as UP_FOR_RETRY. dag_id=scheduler_dag, task_id=insert_to_db_task, execution_date=20221204T000000, start_date=20221217T155119, end_date=20221217T155119
+[2022-12-17 15:51:19,856] {standard_task_runner.py:92} ERROR - Failed to execute job 3 for task insert_to_db_task
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 519, in cmd_query
+    query_attrs=self._query_attrs)
+_mysql_connector.MySQLInterfaceError: No database selected
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/scheduler.py", line 59, in insert_to_db
+    cursor.execute("INSERT INTO EMPLOYEE VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/cursor_cext.py", line 271, in execute
+    raw_as_string=self._raw_as_string)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 522, in cmd_query
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.ProgrammingError: 1046 (3D000): No database selected
+[2022-12-17 15:51:19,912] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-12-17 15:51:20,003] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-12-17 16:05:19,412] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.insert_to_db_task scheduled__2022-12-04T00:00:00+00:00 [queued]>
+[2022-12-17 16:05:19,467] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.insert_to_db_task scheduled__2022-12-04T00:00:00+00:00 [queued]>
+[2022-12-17 16:05:19,468] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 16:05:19,469] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-12-17 16:05:19,471] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 16:05:19,519] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): insert_to_db_task> on 2022-12-04 00:00:00+00:00
+[2022-12-17 16:05:19,527] {standard_task_runner.py:52} INFO - Started process 278 to run task
+[2022-12-17 16:05:19,540] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'scheduler_dag', 'insert_to_db_task', 'scheduled__2022-12-04T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/scheduler.py', '--cfg-path', '/tmp/tmpvacuiv64', '--error-file', '/tmp/tmpxxxdbxqf']
+[2022-12-17 16:05:19,545] {standard_task_runner.py:77} INFO - Job 3: Subtask insert_to_db_task
+[2022-12-17 16:05:19,709] {logging_mixin.py:109} INFO - Running <TaskInstance: scheduler_dag.insert_to_db_task scheduled__2022-12-04T00:00:00+00:00 [running]> on host 029a61150c79
+[2022-12-17 16:05:19,885] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scheduler_dag
+AIRFLOW_CTX_TASK_ID=insert_to_db_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-04T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-04T00:00:00+00:00
+[2022-12-17 16:05:19,890] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '955651720', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:05:19,898] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '026069431', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:05:19,903] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '348029510', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:05:19,906] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '376305554', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:05:19,909] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '429071567', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:05:19,912] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '725850688', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:05:19,920] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '548955584', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:05:19,922] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '121108314', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:05:19,925] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '066600886', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:05:19,928] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '687183353', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:05:19,936] {python.py:175} INFO - Done. Returned value was: None
+[2022-12-17 16:05:19,980] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=scheduler_dag, task_id=insert_to_db_task, execution_date=20221204T000000, start_date=20221217T160519, end_date=20221217T160519
+[2022-12-17 16:05:20,069] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-12-17 16:05:20,193] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

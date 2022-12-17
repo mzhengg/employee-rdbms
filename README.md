@@ -14,7 +14,17 @@ make execute
 python3 interface.py
 ```
 
-3. Destroy the RDBMS (when it is no longer needed)
+3. Update RDBMS with new employees via Airflow (must keep computer running)
+```bash
+cd airflow; docker compose up
+```
+
+4. Shut down Airflow
+```bash
+docker compose down --volumes --rmi all
+```
+
+5. Destroy the RDBMS (when it is no longer needed)
 ```bash
 make unexecute
 ```  
@@ -441,4 +451,4 @@ docker compose up airflow-init
 
     - Airflow Webserver UI will be accessible at: http://localhost:8080/. Username = `airflow` and Password = `airflow`
 
-    - 
+    - Trigger the DAG

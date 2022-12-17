@@ -1,0 +1,32 @@
+[2022-12-17 16:06:12,213] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.insert_to_db_task manual__2022-12-17T16:06:08.738090+00:00 [queued]>
+[2022-12-17 16:06:12,251] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.insert_to_db_task manual__2022-12-17T16:06:08.738090+00:00 [queued]>
+[2022-12-17 16:06:12,252] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 16:06:12,253] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-12-17 16:06:12,254] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 16:06:12,297] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): insert_to_db_task> on 2022-12-17 16:06:08.738090+00:00
+[2022-12-17 16:06:12,303] {standard_task_runner.py:52} INFO - Started process 334 to run task
+[2022-12-17 16:06:12,312] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'scheduler_dag', 'insert_to_db_task', 'manual__2022-12-17T16:06:08.738090+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/scheduler.py', '--cfg-path', '/tmp/tmpif7y61tv', '--error-file', '/tmp/tmp1gb5ikag']
+[2022-12-17 16:06:12,318] {standard_task_runner.py:77} INFO - Job 5: Subtask insert_to_db_task
+[2022-12-17 16:06:12,505] {logging_mixin.py:109} INFO - Running <TaskInstance: scheduler_dag.insert_to_db_task manual__2022-12-17T16:06:08.738090+00:00 [running]> on host 029a61150c79
+[2022-12-17 16:06:12,745] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scheduler_dag
+AIRFLOW_CTX_TASK_ID=insert_to_db_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-17T16:06:08.738090+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-17T16:06:08.738090+00:00
+[2022-12-17 16:06:12,752] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '568767861', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:06:12,758] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '468514982', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:06:12,762] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '736396733', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:06:12,765] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '957895435', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:06:12,769] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '004817453', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:06:12,773] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '391467781', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:06:12,777] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '008510378', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:06:12,780] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '814768308', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:06:12,783] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '776781855', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:06:12,790] {logging_mixin.py:109} INFO - ('Michael', 'B', 'Jordan', '277855413', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5')
+[2022-12-17 16:06:12,798] {python.py:175} INFO - Done. Returned value was: None
+[2022-12-17 16:06:12,841] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=scheduler_dag, task_id=insert_to_db_task, execution_date=20221217T160608, start_date=20221217T160612, end_date=20221217T160612
+[2022-12-17 16:06:12,938] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-12-17 16:06:13,193] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

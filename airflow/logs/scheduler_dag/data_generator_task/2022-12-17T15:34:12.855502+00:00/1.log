@@ -1,0 +1,32 @@
+[2022-12-17 15:34:15,159] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.data_generator_task manual__2022-12-17T15:34:12.855502+00:00 [queued]>
+[2022-12-17 15:34:15,199] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.data_generator_task manual__2022-12-17T15:34:12.855502+00:00 [queued]>
+[2022-12-17 15:34:15,201] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 15:34:15,202] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-12-17 15:34:15,203] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 15:34:15,243] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): data_generator_task> on 2022-12-17 15:34:12.855502+00:00
+[2022-12-17 15:34:15,249] {standard_task_runner.py:52} INFO - Started process 307 to run task
+[2022-12-17 15:34:15,266] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'scheduler_dag', 'data_generator_task', 'manual__2022-12-17T15:34:12.855502+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/scheduler.py', '--cfg-path', '/tmp/tmplyfnnahe', '--error-file', '/tmp/tmpmlvzal5v']
+[2022-12-17 15:34:15,268] {standard_task_runner.py:77} INFO - Job 5: Subtask data_generator_task
+[2022-12-17 15:34:15,416] {logging_mixin.py:109} INFO - Running <TaskInstance: scheduler_dag.data_generator_task manual__2022-12-17T15:34:12.855502+00:00 [running]> on host 1716a21dddec
+[2022-12-17 15:34:15,572] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scheduler_dag
+AIRFLOW_CTX_TASK_ID=data_generator_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-17T15:34:12.855502+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-17T15:34:12.855502+00:00
+[2022-12-17 15:34:15,575] {logging_mixin.py:109} INFO - ['Michael', 'B', 'Jordan', '473028355', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5']
+[2022-12-17 15:34:15,576] {logging_mixin.py:109} INFO - ['Michael', 'B', 'Jordan', '093778323', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5']
+[2022-12-17 15:34:15,578] {logging_mixin.py:109} INFO - ['Michael', 'B', 'Jordan', '831986933', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5']
+[2022-12-17 15:34:15,579] {logging_mixin.py:109} INFO - ['Michael', 'B', 'Jordan', '775684575', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5']
+[2022-12-17 15:34:15,580] {logging_mixin.py:109} INFO - ['Michael', 'B', 'Jordan', '649706944', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5']
+[2022-12-17 15:34:15,581] {logging_mixin.py:109} INFO - ['Michael', 'B', 'Jordan', '684707128', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5']
+[2022-12-17 15:34:15,581] {logging_mixin.py:109} INFO - ['Michael', 'B', 'Jordan', '995918958', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5']
+[2022-12-17 15:34:15,582] {logging_mixin.py:109} INFO - ['Michael', 'B', 'Jordan', '505631726', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5']
+[2022-12-17 15:34:15,583] {logging_mixin.py:109} INFO - ['Michael', 'B', 'Jordan', '329928090', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5']
+[2022-12-17 15:34:15,584] {logging_mixin.py:109} INFO - ['Michael', 'B', 'Jordan', '436323284', '1965-01-09', '731 Fondren, Houston, TX', 'M', '30000', '333445555', '5']
+[2022-12-17 15:34:15,585] {python.py:175} INFO - Done. Returned value was: None
+[2022-12-17 15:34:15,618] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=scheduler_dag, task_id=data_generator_task, execution_date=20221217T153412, start_date=20221217T153415, end_date=20221217T153415
+[2022-12-17 15:34:15,669] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-12-17 15:34:15,761] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
