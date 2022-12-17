@@ -298,22 +298,37 @@ docker compose down --volumes --rmi all
 
 ## How the Interface Works
 
-The interface was created in Python and can be located in ./containers/interface/ as 'interface.py'. It was containerized using a docker-compose.yml and Dockerfile to ensure reproducibility of the project, manage python dependencies, and connect the interface to the database via a Docker network.  
+The interface was created in Python and can be located in `./containers/interface/` as `interface.py`. It was containerized using a docker-compose.yml and Dockerfile to ensure reproducibility of the project, manage python dependencies, and connect the interface to the database via a Docker network.  
 
 ### Process
 
-The Dockerfile uses a Python base image. It starts by creating a directory called 'main', which will serve as the primary working directory. The 'interface.py' and 'requirements.txt' files are copied into the container. All the Python dependencies listed in the 'requirements.txt' are then installed via pip. Finally, an ENTRYPOINT instruction is executed to keep the container running so that a user can access the interface via the container.
+The Dockerfile uses a Python base image. It starts by creating a directory called `main`, which will serve as the primary working directory. The `interface.py` and `requirements.txt` files are copied into the container. All the Python dependencies listed in the `requirements.txt` are then installed via pip. Finally, an `ENTRYPOINT` instruction is executed to keep the container running so that a user can access the interface via the container.  
 
-Earlier I mentioned that the MYSQL_USER and MYSQL_PASSWORD are just 'root'. The MYSQL root account possesses the most priviliges to the database. So, only the admin should have access to this. Any other user that wants access to the database should be given only the priviliges that are necessary for them to fulfill their duties by creating a new user account with the aforementioned priviliges. However for the purpose of this project, I don't create such user and simply use the root account in the interface.
+Earlier I mentioned that the `MYSQL_USER` and `MYSQL_PASSWORD` are just `root`. The MYSQL root account possesses the most priviliges to the database. So, only the admin should have access to this. Any other user that wants access to the database should be given only the priviliges that are necessary for them to fulfill their duties by creating a new user account with the aforementioned priviliges. However for the purpose of this project, I don't create such user and simply use the root account in the interface.  
 
-In order to connect the interface to the database, the mysql-connector-python Python library had to be used. The connection required 5 key pieces of information: host, port, username, password, and database. The username, password, and database can be found in the environment as MYSQL_USER, MYSQL_PASSWORD, and MYSQL_DATABASE, respectively, because we imported them as environmental variables in the docker-compose.yml. The port is '3306' as defined in the docker-compose file on line 13. As for the host, since all services defined by docker-compose.yml are in the same docker network, the interface can locate the database with the name of the database container as the host: warehouse.  
+In order to connect the interface to the database, the `mysql-connector-python` Python library had to be used. The connection required 5 key pieces of information: `host`, `port`, `username`, `password`, and `database`. The `username`, `password`, and `database` can be found in the environment as `MYSQL_USER`, `MYSQL_PASSWORD`, and `MYSQL_DATABASE`, respectively, because we imported them as environmental variables in the docker-compose.yml. The `port` is `3306` as defined in the docker-compose.yml file on line 13. As for the `host`, since all services defined by docker-compose.yml are in the same Docker network, the interface can locate the database with the name of the database container as the host: `warehouse`.  
 
 For a while, I had to keep re-building the images and re-running the containers everytime I made a modification to the code in order to see if a bug was resolved. But that was time consuming. So, I decided to install vim in the container and debug my program straight from the container to increase efficiency. This can be done by following these steps:
 
-1. docker exec -it interface bash
-2. apt-get update
-3. apt-get install vim
-4. vim interface.py  
+1. Access the container
+```bash
+docker exec -it interface bash
+```
+
+2. Update apt-get
+```bash
+apt-get update
+```
+
+3. Install Vim
+```bash 
+apt-get install vim
+```
+
+4. Open Python file with Vim
+```bash
+vim interface.py
+```
 
 Now that a connection has been established, an interface was built and 11 functions were implemented so that a user can interact with the database. The interface is a simple command line based interface made in Python. There is certainly room to make a GUI based interface in the future.  
 
