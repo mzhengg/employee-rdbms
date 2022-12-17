@@ -200,60 +200,90 @@ I used an ER (entity relationship) diagram to build a logical model for the rela
 
 ## Database Design
 
-The EMPLOYEE table contains the following variables with their corresponding data types: FNAME (VARCHAR-15), MINIT (CHAR), LNAME (VARCHAR-15), SSN(CHAR-9), BDATE (YYYY-MM-DD), ADDRESS (VARCHAR-30), SEX (CHAR), SALARY (DECIMAL-10,2), SUPER_SSN (CHAR-9), DNO (INT).
-* Primary key: SSN  
+The `EMPLOYEE` table contains the following variables with their corresponding data types: `FNAME (VARCHAR-15)`, `MINIT (CHAR)`, `LNAME (VARCHAR-15)`, `SSN(CHAR-9)`, `BDATE (YYYY-MM-DD)`, `ADDRESS (VARCHAR-30)`, `SEX (CHAR)`, `SALARY (DECIMAL-10,2)`, `SUPER_SSN (CHAR-9)`, `DNO (INT)`.
+* Primary key: `SSN`  
 
-The DEPARTMENT table contains the following variables with their corresponding data types: DNAME (VARCHAR-15), DNUMBER (INT), MGR_SSN (CHAR-9), MGR_START_DATE (YYYY-MM-DD).
-* Primary key: DNUMBER
-* Unique: DNAME
-* Foreign key: MGR_SSN references SSN in EMPLOYEE  
+The `DEPARTMENT` table contains the following variables with their corresponding data types: `DNAME (VARCHAR-15)`, `DNUMBER (INT)`, `MGR_SSN (CHAR-9)`, `MGR_START_DATE (YYYY-MM-DD)`.
+* Primary key: `DNUMBER`
+* Unique: `DNAME`
+* Foreign key: `MGR_SSN` references `SSN` in `EMPLOYEE`  
 
-The DEPT_LOCATIONS table contains the followung variables with their corresponding data types: DNUMBER (INT), DLOCATION (VARCHAR-15)
-* Primary key: DNUMBER, DLOCATION
-* Foreign key: DNUMBER references DNUMBER in DEPARTMENT  
+The `DEPT_LOCATIONS` table contains the followung variables with their corresponding data types: `DNUMBER (INT)`, `DLOCATION (VARCHAR-15)`
+* Primary key: `DNUMBER`, `DLOCATION`
+* Foreign key: `DNUMBER` references `DNUMBER` in `DEPARTMENT`  
 
-The PROJECT table contains the following variables with their corresponding data types: PNAME (VARCHAR-15), PNUMBER (INT), PLOCATION (VARCHAR-15), DNUM (INT)
-* Primary key: PNUMBER
-* Unique: PNAME
-* Foreign key: DNUM references DNUMBER in DEPARTMENT  
+The `PROJECT` table contains the following variables with their corresponding data types: `PNAME (VARCHAR-15)`, `PNUMBER (INT)`, `PLOCATION (VARCHAR-15)`, `DNUM (INT)`
+* Primary key: `PNUMBER`
+* Unique: `PNAME`
+* Foreign key: `DNUM` references `DNUMBER` in `DEPARTMENT`  
 
-The WORKS_ON table contains the followung variables with their corresponding data types: ESSN (CHAR-9), PNO (INT), HOURS (DECIMAL-3,1)
-* Primary key: ESSN, PNO
-* Foreign key: ESSN references SSN in EMPLOYEE, PNO references PNUMBER in PROJECT  
+The `WORKS_ON` table contains the followung variables with their corresponding data types: `ESSN (CHAR-9)`, `PNO (INT)`, `HOURS (DECIMAL-3,1)`
+* Primary key: `ESSN`, `PNO`
+* Foreign key: `ESSN` references `SSN` in `EMPLOYEE`, `PNO` references `PNUMBER` in `PROJECT`  
 
-The DEPENDENT table contains the following variables with their corresponding data types: ESSN (CHAR-9), DEPENDENT_NAME (VARCHAR-15), SEX (CHAR), BDATE (YYYY-MM-DD), RELATIONSHIP (VARCHAR-8)
-* Primary key: ESSN, DEPENDENT_NAME
-* Foreign key: ESSN references SSN in EMPLOYEE
+The `DEPENDENT` table contains the following variables with their corresponding data types: `ESSN (CHAR-9)`, `DEPENDENT_NAME (VARCHAR-15)`, `SEX (CHAR)`, `BDATE (YYYY-MM-DD)`, `RELATIONSHIP (VARCHAR-8)`
+* Primary key: `ESSN`, `DEPENDENT_NAME`
+* Foreign key: `ESSN` references `SSN` in `EMPLOYEE`
 
 ## How the Database Works
 
-The database was created in MySQL and saved as a .sql file, called 'database.sql',  in ./containers/warehouse/. It was containerized with a docker-compose.yml file in order to isolate the database from the local system and ensure reproducibility on other systems as long as they have Docker installed.  
+The database was created in MySQL and saved as a `.sql` file, called `database.sql`,  in `./containers/warehouse/`. It was containerized with a `docker-compose.yml` file in order to isolate the database from the local system and ensure reproducibility on other systems as long as they have Docker installed.  
 
 ### Process
 
-The database is stored in the container named *warehouse*.  
+The database is stored in the container named `warehouse`.  
 
-A MySQL base *image* (mysql) was used to build the container. 
+A MySQL base image was used to build the container. 
 
-*restart* was defined to 'always' to ensure the container continuously runs.  
+`restart` was set to `always` in the `docker-compose.yml` to ensure the container continuously runs.  
 
-Several important MySQL parameters were passed into the container from environmental variables defined in the .env file of this repository. The .env file is a hidden file that defines environmental variables that can be used by the scripts in this repo. For the purposes of this project, the MYSQL_USER, MYSQL_PASSWORD, and MYSQL_ROOT_PASSWORD were set to 'root'. Please note that the passwords that were used are not secure and in a real-life application, stronger passwords should be used to increase security.
+Several important MySQL parameters were passed into the container from environment variables defined in the `.env` file of this repository through the `docker-compose.yml` file. For the purposes of this project, the MYSQL_USER, MYSQL_PASSWORD, and MYSQL_ROOT_PASSWORD were set to `root`. Please note that the passwords that were used are not secure and in a real-life application, stronger passwords should be used to increase security.
 
-The MYSQL_DATABASE is set to 'WAREHOUSE', which is consistent with the schema defined in the 'database.sql' file. It is important that the schema, or database, is the same or the database will not be succesfully built.  
+The `MYSQL_DATABASE` is set to `WAREHOUSE` in the `docker-compose.yml` file, which is consistent with the schema defined in `database.sql`. It is important that the schema, or database, is the same or the database will not be succesfully built.  
 
-*ports* is used to specifify the host port and container port (host:container) so that a connection can be established to this container from within and without. When container ports are mentioned in docker-compose.yml, they will be shared amongst services started by that docker-compose because they are on the same network.  
+`ports` is used to specifify the host port and container port (host:container) so that a connection can be established to this container from within and without. When container ports are mentioned in the `docker-compose.yml` file, they will be shared amongst services started by that docker-compose because they are on the same network.  
 
-*volumes* provides the path to the 'database.sql' file so that the database can be imported into the container.  
+`volumes` provides the path to the `database.sql` file so that the database can be imported into the container when the `docker-compose.yml` file is run.  
 
 To check that the database was succesfully containerized, follow these steps:
-1. Open Terminal, navigate to the main folder of this repo
-2. docker compose up
-3. docker exec -it warehouse bash
-4. mysql -u root -p root
-5. show schemas; (should see WAREHOUSE schema)
-6. use WAREHOUSE;
-7. show tables; (should see 6 tables)
-8. docker compose down --volumes --rmi all  
+
+1. Open `Terminal`, navigate to the main folder of this repo
+2. Start containers and services
+```bash
+docker compose up
+```
+
+3. Access the `warehouse` container
+```bash
+docker exec -it warehouse bash
+```
+
+4. Within the container, execute the following commands:
+
+    - Login to MySQL using the information from the `.env` file
+    ```sql
+    mysql -u root -p root
+    ```
+
+    - Show all schemas in MySQL (should see `WAREHOUSE` schema)
+    ```sql
+    show schemas; 
+    ```
+
+    - Select the `WAREHOUSE` schema
+    ```sql
+    use WAREHOUSE;
+    ```
+
+    - Show all the tables in that schema (should see 6 tables)
+    ```sql
+    show tables;
+    ```
+
+5. If everything in step 4 is satisfied, destroy the containers.
+```bash
+docker compose down --volumes --rmi all
+```
 
 ## How the Interface Works
 
