@@ -184,3 +184,25 @@ AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-04T00:00:00+00:00
 [2022-12-17 16:05:19,980] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=scheduler_dag, task_id=insert_to_db_task, execution_date=20221204T000000, start_date=20221217T160519, end_date=20221217T160519
 [2022-12-17 16:05:20,069] {local_task_job.py:154} INFO - Task exited with return code 0
 [2022-12-17 16:05:20,193] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-12-17 16:22:56,470] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.insert_to_db_task scheduled__2022-12-04T00:00:00+00:00 [queued]>
+[2022-12-17 16:22:56,516] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.insert_to_db_task scheduled__2022-12-04T00:00:00+00:00 [queued]>
+[2022-12-17 16:22:56,518] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 16:22:56,519] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-12-17 16:22:56,520] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 16:22:56,568] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): insert_to_db_task> on 2022-12-04 00:00:00+00:00
+[2022-12-17 16:22:56,575] {standard_task_runner.py:52} INFO - Started process 272 to run task
+[2022-12-17 16:22:56,591] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'scheduler_dag', 'insert_to_db_task', 'scheduled__2022-12-04T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/scheduler.py', '--cfg-path', '/tmp/tmpzywhjz0z', '--error-file', '/tmp/tmpakkf0kw1']
+[2022-12-17 16:22:56,593] {standard_task_runner.py:77} INFO - Job 3: Subtask insert_to_db_task
+[2022-12-17 16:22:56,741] {logging_mixin.py:109} INFO - Running <TaskInstance: scheduler_dag.insert_to_db_task scheduled__2022-12-04T00:00:00+00:00 [running]> on host b787dc03e2d9
+[2022-12-17 16:22:56,884] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scheduler_dag
+AIRFLOW_CTX_TASK_ID=insert_to_db_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-04T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-04T00:00:00+00:00
+[2022-12-17 16:22:56,917] {python.py:175} INFO - Done. Returned value was: None
+[2022-12-17 16:22:56,953] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=scheduler_dag, task_id=insert_to_db_task, execution_date=20221204T000000, start_date=20221217T162256, end_date=20221217T162256
+[2022-12-17 16:22:57,036] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-12-17 16:22:57,135] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

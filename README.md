@@ -438,7 +438,7 @@ docker compose up airflow-init
 
 - Create the DAG:
 
-    - All connection information will be imported via environmental variables in the `.env` folder
+    - All connection information is stored in the `.env` file, but they were hard coded into the DAG for simplicity
     - `data_generator` function will create new employees to insert into the database
     - `insert_to_db` function will perform the insertion of data into the database
 
