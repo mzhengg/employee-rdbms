@@ -4,11 +4,22 @@ Data modeling is an important job of a Data Engineer. So, in this project, I des
 
 To launch this application, follow these steps:
 
-1. make execute (builds the RDBMS)
-2. python3 interface.py (database takes ~20 seconds to bootup)
-3. make unexecute (destroys the RDBMS)
+1. Build the RDBMS
+```bash
+make execute
+```
 
-The database has been populated with dummy data. So, feel free to experiment with the interface!
+2. Run the RDBMS (database takes approximately 20 seconds to bootup)
+```bash 
+python3 interface.py
+```
+
+3. Destroy the RDBMS (when it is no longer needed)
+```bash
+make unexecute
+```  
+
+The database has been populated with dummy data. So, feel free to experiment with the interface!  
 
 *Please note that any changes made in the database will be lost when the container is shut down and started again.*
 
