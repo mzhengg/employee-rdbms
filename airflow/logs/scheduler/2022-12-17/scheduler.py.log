@@ -732,3 +732,409 @@ Traceback (most recent call last):
 mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
 [2022-12-17 04:47:38,293] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
 [2022-12-17 04:47:38,318] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.265 seconds
+[2022-12-17 04:48:08,534] {processor.py:163} INFO - Started process (PID=300) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 04:48:08,537] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 04:48:08,540] {logging_mixin.py:109} INFO - [2022-12-17 04:48:08,539] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:48:08,730] {logging_mixin.py:109} INFO - [2022-12-17 04:48:08,723] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown MySQL server host 'warehouse' (-2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
+[2022-12-17 04:48:08,758] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:48:08,778] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.251 seconds
+[2022-12-17 04:48:38,947] {processor.py:163} INFO - Started process (PID=325) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 04:48:38,951] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 04:48:38,953] {logging_mixin.py:109} INFO - [2022-12-17 04:48:38,953] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:48:39,146] {logging_mixin.py:109} INFO - [2022-12-17 04:48:39,138] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown MySQL server host 'warehouse' (-2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
+[2022-12-17 04:48:39,173] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:48:39,198] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.257 seconds
+[2022-12-17 04:49:09,269] {processor.py:163} INFO - Started process (PID=359) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 04:49:09,274] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 04:49:09,277] {logging_mixin.py:109} INFO - [2022-12-17 04:49:09,276] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:49:09,494] {logging_mixin.py:109} INFO - [2022-12-17 04:49:09,485] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown MySQL server host 'warehouse' (-2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
+[2022-12-17 04:49:09,546] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:49:09,572] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.311 seconds
+[2022-12-17 04:49:39,631] {processor.py:163} INFO - Started process (PID=377) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 04:49:39,635] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 04:49:39,637] {logging_mixin.py:109} INFO - [2022-12-17 04:49:39,637] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:49:39,811] {logging_mixin.py:109} INFO - [2022-12-17 04:49:39,804] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown MySQL server host 'warehouse' (-2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
+[2022-12-17 04:49:39,839] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:49:39,862] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.236 seconds
+[2022-12-17 04:50:10,092] {processor.py:163} INFO - Started process (PID=411) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 04:50:10,095] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 04:50:10,097] {logging_mixin.py:109} INFO - [2022-12-17 04:50:10,097] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:50:10,282] {logging_mixin.py:109} INFO - [2022-12-17 04:50:10,263] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown MySQL server host 'warehouse' (-2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
+[2022-12-17 04:50:10,328] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:50:10,349] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.263 seconds
+[2022-12-17 04:50:40,506] {processor.py:163} INFO - Started process (PID=429) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 04:50:40,509] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 04:50:40,511] {logging_mixin.py:109} INFO - [2022-12-17 04:50:40,511] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:50:40,684] {logging_mixin.py:109} INFO - [2022-12-17 04:50:40,676] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown MySQL server host 'warehouse' (-2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
+[2022-12-17 04:50:40,711] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:50:40,732] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.233 seconds
+[2022-12-17 04:51:10,927] {processor.py:163} INFO - Started process (PID=463) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 04:51:10,930] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 04:51:10,932] {logging_mixin.py:109} INFO - [2022-12-17 04:51:10,932] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:51:11,106] {logging_mixin.py:109} INFO - [2022-12-17 04:51:11,098] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown MySQL server host 'warehouse' (-2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
+[2022-12-17 04:51:11,133] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:51:11,154] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.234 seconds
+[2022-12-17 04:51:41,331] {processor.py:163} INFO - Started process (PID=481) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 04:51:41,336] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 04:51:41,338] {logging_mixin.py:109} INFO - [2022-12-17 04:51:41,337] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:51:41,534] {logging_mixin.py:109} INFO - [2022-12-17 04:51:41,527] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown MySQL server host 'warehouse' (-2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
+[2022-12-17 04:51:41,562] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:51:41,584] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.260 seconds
+[2022-12-17 04:52:11,781] {processor.py:163} INFO - Started process (PID=516) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 04:52:11,784] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 04:52:11,786] {logging_mixin.py:109} INFO - [2022-12-17 04:52:11,786] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:52:11,957] {logging_mixin.py:109} INFO - [2022-12-17 04:52:11,949] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown MySQL server host 'warehouse' (-2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
+[2022-12-17 04:52:11,984] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:52:12,007] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.233 seconds
+[2022-12-17 04:52:42,219] {processor.py:163} INFO - Started process (PID=534) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 04:52:42,224] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 04:52:42,227] {logging_mixin.py:109} INFO - [2022-12-17 04:52:42,227] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:52:42,394] {logging_mixin.py:109} INFO - [2022-12-17 04:52:42,387] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown MySQL server host 'warehouse' (-2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
+[2022-12-17 04:52:42,420] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:52:42,439] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.231 seconds
+[2022-12-17 04:53:12,602] {processor.py:163} INFO - Started process (PID=568) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 04:53:12,605] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 04:53:12,607] {logging_mixin.py:109} INFO - [2022-12-17 04:53:12,607] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:53:12,941] {logging_mixin.py:109} INFO - [2022-12-17 04:53:12,934] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown MySQL server host 'warehouse' (-2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
+[2022-12-17 04:53:12,972] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:53:12,995] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.399 seconds
+[2022-12-17 04:53:43,153] {processor.py:163} INFO - Started process (PID=596) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 04:53:43,157] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 04:53:43,159] {logging_mixin.py:109} INFO - [2022-12-17 04:53:43,159] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:53:43,340] {logging_mixin.py:109} INFO - [2022-12-17 04:53:43,334] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown MySQL server host 'warehouse' (-2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
+[2022-12-17 04:53:43,368] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:53:43,391] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.245 seconds
+[2022-12-17 04:54:13,531] {processor.py:163} INFO - Started process (PID=620) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 04:54:13,535] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 04:54:13,538] {logging_mixin.py:109} INFO - [2022-12-17 04:54:13,538] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:54:13,706] {logging_mixin.py:109} INFO - [2022-12-17 04:54:13,700] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown MySQL server host 'warehouse' (-2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
+[2022-12-17 04:54:13,736] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:54:13,757] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.233 seconds
+[2022-12-17 04:54:43,806] {processor.py:163} INFO - Started process (PID=654) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 04:54:43,810] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 04:54:43,812] {logging_mixin.py:109} INFO - [2022-12-17 04:54:43,811] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:54:43,994] {logging_mixin.py:109} INFO - [2022-12-17 04:54:43,986] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown MySQL server host 'warehouse' (-2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
+[2022-12-17 04:54:44,022] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 04:54:44,210] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.411 seconds

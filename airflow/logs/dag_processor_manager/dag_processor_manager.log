@@ -847,3 +847,202 @@ File Path                       PID    Runtime      # DAGs    # Errors  Last Run
 ================================================================================
 [2022-12-17 04:47:46,207] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
 [2022-12-17 04:47:46,210] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:42:46.210641+00:00
+[2022-12-17 04:47:56,283] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:47:56,286] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:42:56.286283+00:00
+[2022-12-17 04:48:06,418] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:48:06,431] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:43:06.430794+00:00
+[2022-12-17 04:48:06,496] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/scheduler.py                           0           1  0.29s           2022-12-17T04:47:38
+================================================================================
+[2022-12-17 04:48:16,545] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:48:16,549] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:43:16.548920+00:00
+[2022-12-17 04:48:26,646] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:48:26,650] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:43:26.650246+00:00
+[2022-12-17 04:48:36,732] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:48:36,735] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:43:36.735649+00:00
+[2022-12-17 04:48:36,767] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/scheduler.py                           0           1  0.28s           2022-12-17T04:48:08
+================================================================================
+[2022-12-17 04:48:47,013] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:48:47,025] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:43:47.024496+00:00
+[2022-12-17 04:48:57,118] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:48:57,121] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:43:57.121588+00:00
+[2022-12-17 04:49:07,197] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:49:07,200] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:44:07.200596+00:00
+[2022-12-17 04:49:07,233] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/scheduler.py                           0           1  0.29s           2022-12-17T04:48:39
+================================================================================
+[2022-12-17 04:49:17,390] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:49:17,392] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:44:17.392180+00:00
+[2022-12-17 04:49:27,502] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:49:27,505] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:44:27.504850+00:00
+[2022-12-17 04:49:37,566] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:49:37,568] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:44:37.568678+00:00
+[2022-12-17 04:49:37,600] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/scheduler.py                           0           1  0.35s           2022-12-17T04:49:09
+================================================================================
+[2022-12-17 04:49:47,841] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:49:47,844] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:44:47.844118+00:00
+[2022-12-17 04:49:57,909] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:49:57,912] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:44:57.911946+00:00
+[2022-12-17 04:50:03,963] {manager.py:663} INFO - Searching for files in /opt/airflow/dags
+[2022-12-17 04:50:03,971] {manager.py:666} INFO - There are 1 files in /opt/airflow/dags
+[2022-12-17 04:50:08,023] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:50:08,026] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:45:08.025987+00:00
+[2022-12-17 04:50:08,060] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/scheduler.py                           0           1  0.26s           2022-12-17T04:49:39
+================================================================================
+[2022-12-17 04:50:18,100] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:50:18,102] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:45:18.102427+00:00
+[2022-12-17 04:50:28,215] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:50:28,217] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:45:28.217057+00:00
+[2022-12-17 04:50:38,287] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:50:38,289] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:45:38.289725+00:00
+[2022-12-17 04:50:38,323] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/scheduler.py                           0           1  0.29s           2022-12-17T04:50:10
+================================================================================
+[2022-12-17 04:50:48,541] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:50:48,544] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:45:48.544111+00:00
+[2022-12-17 04:50:58,611] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:50:58,613] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:45:58.612941+00:00
+[2022-12-17 04:51:08,687] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:51:08,689] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:46:08.689664+00:00
+[2022-12-17 04:51:08,721] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/scheduler.py                           0           1  0.26s           2022-12-17T04:50:40
+================================================================================
+[2022-12-17 04:51:18,948] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:51:18,951] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:46:18.951314+00:00
+[2022-12-17 04:51:29,028] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:51:29,031] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:46:29.031066+00:00
+[2022-12-17 04:51:39,093] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:51:39,096] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:46:39.096339+00:00
+[2022-12-17 04:51:39,134] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/scheduler.py                           0           1  0.26s           2022-12-17T04:51:11
+================================================================================
+[2022-12-17 04:51:49,369] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:51:49,372] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:46:49.372682+00:00
+[2022-12-17 04:51:59,437] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:51:59,440] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:46:59.440077+00:00
+[2022-12-17 04:52:09,546] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:52:09,548] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:47:09.548190+00:00
+[2022-12-17 04:52:09,583] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/scheduler.py                           0           1  0.29s           2022-12-17T04:51:41
+================================================================================
+[2022-12-17 04:52:19,788] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:52:19,790] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:47:19.790711+00:00
+[2022-12-17 04:52:29,871] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:52:29,873] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:47:29.873567+00:00
+[2022-12-17 04:52:39,940] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:52:39,943] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:47:39.943682+00:00
+[2022-12-17 04:52:39,976] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/scheduler.py                           0           1  0.26s           2022-12-17T04:52:12
+================================================================================
+[2022-12-17 04:52:50,222] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:52:50,225] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:47:50.224869+00:00
+[2022-12-17 04:53:00,289] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:53:00,291] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:48:00.291594+00:00
+[2022-12-17 04:53:10,377] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:53:10,380] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:48:10.379929+00:00
+[2022-12-17 04:53:10,414] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/scheduler.py                           0           1  0.28s           2022-12-17T04:52:42
+================================================================================
+[2022-12-17 04:53:20,612] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:53:20,615] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:48:20.615139+00:00
+[2022-12-17 04:53:30,698] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:53:30,700] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:48:30.700114+00:00
+[2022-12-17 04:53:40,767] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:53:40,770] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:48:40.769962+00:00
+[2022-12-17 04:53:40,800] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/scheduler.py                           0           1  0.43s           2022-12-17T04:53:13
+================================================================================
+[2022-12-17 04:53:51,162] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:53:51,164] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:48:51.164315+00:00
+[2022-12-17 04:54:01,236] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:54:01,240] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:49:01.240128+00:00
+[2022-12-17 04:54:11,310] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:54:11,312] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:49:11.312321+00:00
+[2022-12-17 04:54:11,349] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/scheduler.py                           0           1  0.27s           2022-12-17T04:53:43
+================================================================================
+[2022-12-17 04:54:21,549] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:54:21,561] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:49:21.561365+00:00
+[2022-12-17 04:54:31,664] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:54:31,668] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:49:31.667984+00:00
+[2022-12-17 04:54:41,740] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:54:41,743] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:49:41.742981+00:00
+[2022-12-17 04:54:41,778] {manager.py:784} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/scheduler.py                           0           1  0.26s           2022-12-17T04:54:13
+================================================================================
+[2022-12-17 04:54:51,900] {manager.py:1065} INFO - Finding 'running' jobs without a recent heartbeat
+[2022-12-17 04:54:51,904] {manager.py:1069} INFO - Failing jobs without heartbeat after 2022-12-17 04:49:51.904234+00:00
+[2022-12-17 04:54:58,925] {manager.py:495} INFO - Exiting gracefully upon receiving signal 15

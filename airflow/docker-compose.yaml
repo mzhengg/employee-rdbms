@@ -276,9 +276,9 @@ services:
         condition: service_completed_successfully
 
 networks:
-  my-proxy-net:
-    external:
-      name: network
+  default:
+    name: default
+    external: true
 
 volumes:
   postgres-db-volume:

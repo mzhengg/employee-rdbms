@@ -388,24 +388,15 @@ docker compose up airflow-init
 ```
 
 - Connect the Airflow DAG to the Database using a Docker network:
-
-    - Create a network with the name `network` in the `docker-compose.yml` file located in the main directory:
-
-        - Add the following below `services`:
-        ```bash
-        networks:
-            proxynet:
-                name: network
-        ```
     
-    - Now add the following to the `docker-compose.yml` file in the `airflow` directory:
+    - Now add the following to the `docker-compose.yml` file in the `airflow` directory: (when the docker-compose.yml for the interface and warehouse is run, a `default` network is created that we can add to this docker-compose.yml as an external network)
 
         - Enter the following below `services`:
         ```bash
         networks:
-            my-proxy-net:
-                external:
-                    name: network
+            default:
+                name: default
+                external: true
         ```
 
 - Create a Dockerfile to install Python dependencies in Airflow container:
