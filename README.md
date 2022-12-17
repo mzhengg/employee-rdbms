@@ -408,4 +408,27 @@ docker compose up airflow-init
                     name: network
         ```
 
-    
+- Create a Dockerfile to install Python dependencies in Airflow container:
+
+    - Go to `airflow` directory and create Dockerfile
+    ```bash
+    touch Dockerfile
+    ```
+
+    - `requirements.txt` contains all the Python dependencies required
+
+    - Enter the following in the Dockerfile:
+    ```bash
+    FROM apache/airflow:2.2.3
+
+    ENV AIRFLOW_HOME=/opt/airflow
+
+    USER root
+
+    RUN apt-get update
+
+    COPY requirements.txt .
+    RUN pip install -r requirements.txt
+
+    WORKDIR $AIRFLOW_HOME
+    ```
