@@ -80,7 +80,7 @@ with DAG(
 
     insert_to_db_task = PythonOperator(
         task_id = 'insert_to_db_task',
-        python_callablle = insert_to_db,
+        python_callable = insert_to_db,
         op_kwargs = {
             'new_employees': new_employees
         }

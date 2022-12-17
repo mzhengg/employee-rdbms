@@ -1138,3 +1138,492 @@ Traceback (most recent call last):
 mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
 [2022-12-17 04:54:44,022] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
 [2022-12-17 04:54:44,210] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.411 seconds
+[2022-12-17 05:07:14,680] {processor.py:163} INFO - Started process (PID=136) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:07:14,691] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:07:14,700] {logging_mixin.py:109} INFO - [2022-12-17 05:07:14,699] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:07:16,525] {logging_mixin.py:109} INFO - [2022-12-17 05:07:16,504] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+[2022-12-17 05:07:16,569] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:07:16,614] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 1.952 seconds
+[2022-12-17 05:07:47,111] {processor.py:163} INFO - Started process (PID=170) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:07:47,124] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:07:47,126] {logging_mixin.py:109} INFO - [2022-12-17 05:07:47,126] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:07:47,684] {logging_mixin.py:109} INFO - [2022-12-17 05:07:47,661] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+[2022-12-17 05:07:47,738] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:07:47,787] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.684 seconds
+[2022-12-17 05:08:17,999] {processor.py:163} INFO - Started process (PID=188) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:08:18,005] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:08:18,008] {logging_mixin.py:109} INFO - [2022-12-17 05:08:18,008] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:08:18,252] {logging_mixin.py:109} INFO - [2022-12-17 05:08:18,244] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+[2022-12-17 05:08:18,284] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:08:18,308] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.320 seconds
+[2022-12-17 05:08:48,675] {processor.py:163} INFO - Started process (PID=223) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:08:48,679] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:08:48,682] {logging_mixin.py:109} INFO - [2022-12-17 05:08:48,681] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:08:48,913] {logging_mixin.py:109} INFO - [2022-12-17 05:08:48,903] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+[2022-12-17 05:08:48,972] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:08:49,002] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.333 seconds
+[2022-12-17 05:09:19,242] {processor.py:163} INFO - Started process (PID=252) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:09:19,248] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:09:19,251] {logging_mixin.py:109} INFO - [2022-12-17 05:09:19,250] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:09:19,498] {logging_mixin.py:109} INFO - [2022-12-17 05:09:19,489] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+[2022-12-17 05:09:19,530] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:09:19,555] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.335 seconds
+[2022-12-17 05:09:49,742] {processor.py:163} INFO - Started process (PID=276) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:09:49,745] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:09:49,748] {logging_mixin.py:109} INFO - [2022-12-17 05:09:49,747] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:09:49,961] {logging_mixin.py:109} INFO - [2022-12-17 05:09:49,954] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+[2022-12-17 05:09:49,990] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:09:50,011] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.275 seconds
+[2022-12-17 05:10:20,155] {processor.py:163} INFO - Started process (PID=310) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:10:20,159] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:10:20,162] {logging_mixin.py:109} INFO - [2022-12-17 05:10:20,161] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:10:20,368] {logging_mixin.py:109} INFO - [2022-12-17 05:10:20,358] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+[2022-12-17 05:10:20,396] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:10:20,419] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.281 seconds
+[2022-12-17 05:10:50,568] {processor.py:163} INFO - Started process (PID=328) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:10:50,572] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:10:50,575] {logging_mixin.py:109} INFO - [2022-12-17 05:10:50,574] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:10:50,806] {logging_mixin.py:109} INFO - [2022-12-17 05:10:50,799] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+[2022-12-17 05:10:50,839] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:10:50,863] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.301 seconds
+[2022-12-17 05:11:20,914] {processor.py:163} INFO - Started process (PID=362) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:11:20,919] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:11:20,921] {logging_mixin.py:109} INFO - [2022-12-17 05:11:20,921] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:11:21,154] {logging_mixin.py:109} INFO - [2022-12-17 05:11:21,145] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'airflow'@'172.24.0.7' (using password: NO)
+[2022-12-17 05:11:21,183] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:11:21,203] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.297 seconds
+[2022-12-17 05:21:04,336] {processor.py:163} INFO - Started process (PID=135) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:21:04,349] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:21:04,361] {logging_mixin.py:109} INFO - [2022-12-17 05:21:04,361] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:21:05,976] {logging_mixin.py:109} INFO - [2022-12-17 05:21:05,970] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 85, in <module>
+    'new_employees': new_employees
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 177, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['python_callable'] is required
+[2022-12-17 05:21:06,006] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:21:06,029] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 1.720 seconds
+[2022-12-17 05:21:36,201] {processor.py:163} INFO - Started process (PID=171) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:21:36,209] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:21:36,213] {logging_mixin.py:109} INFO - [2022-12-17 05:21:36,211] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:21:36,846] {logging_mixin.py:109} INFO - [2022-12-17 05:21:36,832] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 85, in <module>
+    'new_employees': new_employees
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 177, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['python_callable'] is required
+[2022-12-17 05:21:36,905] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:21:36,954] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.769 seconds
+[2022-12-17 05:22:07,263] {processor.py:163} INFO - Started process (PID=189) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:22:07,266] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:22:07,268] {logging_mixin.py:109} INFO - [2022-12-17 05:22:07,268] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:22:07,480] {logging_mixin.py:109} INFO - [2022-12-17 05:22:07,475] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 85, in <module>
+    'new_employees': new_employees
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 177, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['python_callable'] is required
+[2022-12-17 05:22:07,507] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:22:07,526] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.270 seconds
+[2022-12-17 05:22:37,612] {processor.py:163} INFO - Started process (PID=223) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:22:37,617] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:22:37,619] {logging_mixin.py:109} INFO - [2022-12-17 05:22:37,619] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:22:37,932] {logging_mixin.py:109} INFO - [2022-12-17 05:22:37,926] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 85, in <module>
+    'new_employees': new_employees
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 177, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['python_callable'] is required
+[2022-12-17 05:22:37,962] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:22:37,990] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.384 seconds
+[2022-12-17 05:23:08,174] {processor.py:163} INFO - Started process (PID=240) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:23:08,178] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:23:08,181] {logging_mixin.py:109} INFO - [2022-12-17 05:23:08,180] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:23:08,389] {logging_mixin.py:109} INFO - [2022-12-17 05:23:08,383] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 85, in <module>
+    'new_employees': new_employees
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 177, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['python_callable'] is required
+[2022-12-17 05:23:08,415] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:23:08,435] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.268 seconds
+[2022-12-17 05:23:38,540] {processor.py:163} INFO - Started process (PID=275) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:23:38,545] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:23:38,547] {logging_mixin.py:109} INFO - [2022-12-17 05:23:38,547] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:23:38,849] {logging_mixin.py:109} INFO - [2022-12-17 05:23:38,841] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 85, in <module>
+    'new_employees': new_employees
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 177, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['python_callable'] is required
+[2022-12-17 05:23:38,881] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:23:38,903] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.377 seconds
+[2022-12-17 05:24:09,102] {processor.py:163} INFO - Started process (PID=293) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:24:09,105] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:24:09,108] {logging_mixin.py:109} INFO - [2022-12-17 05:24:09,108] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:24:09,355] {logging_mixin.py:109} INFO - [2022-12-17 05:24:09,350] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 85, in <module>
+    'new_employees': new_employees
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 177, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['python_callable'] is required
+[2022-12-17 05:24:09,384] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:24:09,405] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.310 seconds
+[2022-12-17 05:24:39,570] {processor.py:163} INFO - Started process (PID=327) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:24:39,579] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:24:39,582] {logging_mixin.py:109} INFO - [2022-12-17 05:24:39,581] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:24:39,845] {logging_mixin.py:109} INFO - [2022-12-17 05:24:39,839] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 85, in <module>
+    'new_employees': new_employees
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 177, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['python_callable'] is required
+[2022-12-17 05:24:39,874] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:24:39,898] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.334 seconds
+[2022-12-17 05:24:54,681] {processor.py:163} INFO - Started process (PID=345) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:24:54,684] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:24:54,686] {logging_mixin.py:109} INFO - [2022-12-17 05:24:54,686] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:24:55,018] {processor.py:654} INFO - DAG(s) dict_keys(['scheduler_dag']) retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:30:40,656] {processor.py:163} INFO - Started process (PID=135) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:30:40,681] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:30:40,683] {logging_mixin.py:109} INFO - [2022-12-17 05:30:40,683] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:30:42,359] {processor.py:654} INFO - DAG(s) dict_keys(['scheduler_dag']) retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:31:23,936] {logging_mixin.py:109} INFO - [2022-12-17 05:31:23,936] {manager.py:496} INFO - Created Permission View: can read on DAG:scheduler_dag
+[2022-12-17 05:31:23,975] {logging_mixin.py:109} INFO - [2022-12-17 05:31:23,975] {manager.py:496} INFO - Created Permission View: can edit on DAG:scheduler_dag
+[2022-12-17 05:31:23,977] {logging_mixin.py:109} INFO - [2022-12-17 05:31:23,976] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-12-17 05:31:24,018] {logging_mixin.py:109} INFO - [2022-12-17 05:31:24,014] {dag.py:2415} INFO - Creating ORM DAG for scheduler_dag
+[2022-12-17 05:31:24,080] {logging_mixin.py:109} INFO - [2022-12-17 05:31:24,080] {dag.py:2935} INFO - Setting next_dagrun for scheduler_dag to 2022-12-04 00:00:00+00:00
+[2022-12-17 05:31:24,148] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 43.501 seconds
+[2022-12-17 05:31:54,442] {processor.py:163} INFO - Started process (PID=203) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:31:54,446] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:31:54,448] {logging_mixin.py:109} INFO - [2022-12-17 05:31:54,448] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:31:54,732] {processor.py:654} INFO - DAG(s) dict_keys(['scheduler_dag']) retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:31:54,761] {logging_mixin.py:109} INFO - [2022-12-17 05:31:54,760] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-12-17 05:31:54,818] {logging_mixin.py:109} INFO - [2022-12-17 05:31:54,818] {dag.py:2935} INFO - Setting next_dagrun for scheduler_dag to 2022-12-04 00:00:00+00:00
+[2022-12-17 05:31:54,840] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.405 seconds
+[2022-12-17 05:32:25,034] {processor.py:163} INFO - Started process (PID=221) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:32:25,039] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:32:25,042] {logging_mixin.py:109} INFO - [2022-12-17 05:32:25,041] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:32:25,308] {processor.py:654} INFO - DAG(s) dict_keys(['scheduler_dag']) retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:32:25,338] {logging_mixin.py:109} INFO - [2022-12-17 05:32:25,338] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-12-17 05:32:25,395] {logging_mixin.py:109} INFO - [2022-12-17 05:32:25,394] {dag.py:2935} INFO - Setting next_dagrun for scheduler_dag to 2022-12-11T00:00:00+00:00
+[2022-12-17 05:32:25,418] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.390 seconds
+[2022-12-17 05:32:55,600] {processor.py:163} INFO - Started process (PID=256) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:32:55,605] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:32:55,607] {logging_mixin.py:109} INFO - [2022-12-17 05:32:55,607] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:32:56,018] {processor.py:654} INFO - DAG(s) dict_keys(['scheduler_dag']) retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:32:56,076] {logging_mixin.py:109} INFO - [2022-12-17 05:32:56,076] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-12-17 05:32:56,133] {logging_mixin.py:109} INFO - [2022-12-17 05:32:56,133] {dag.py:2935} INFO - Setting next_dagrun for scheduler_dag to 2022-12-11T00:00:00+00:00
+[2022-12-17 05:32:56,163] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.569 seconds
+[2022-12-17 05:33:26,405] {processor.py:163} INFO - Started process (PID=274) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:33:26,409] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:33:26,411] {logging_mixin.py:109} INFO - [2022-12-17 05:33:26,410] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:33:26,647] {processor.py:654} INFO - DAG(s) dict_keys(['scheduler_dag']) retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:33:26,675] {logging_mixin.py:109} INFO - [2022-12-17 05:33:26,674] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-12-17 05:33:26,734] {logging_mixin.py:109} INFO - [2022-12-17 05:33:26,733] {dag.py:2935} INFO - Setting next_dagrun for scheduler_dag to 2022-12-11T00:00:00+00:00
+[2022-12-17 05:33:26,755] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.357 seconds
+[2022-12-17 05:33:51,939] {processor.py:163} INFO - Started process (PID=308) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:33:51,947] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:33:51,952] {logging_mixin.py:109} INFO - [2022-12-17 05:33:51,952] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:33:52,302] {processor.py:654} INFO - DAG(s) dict_keys(['scheduler_dag']) retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:33:52,355] {logging_mixin.py:109} INFO - [2022-12-17 05:33:52,354] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-12-17 05:33:52,428] {logging_mixin.py:109} INFO - [2022-12-17 05:33:52,427] {dag.py:2935} INFO - Setting next_dagrun for scheduler_dag to 2022-12-11T00:00:00+00:00
+[2022-12-17 05:33:52,474] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.552 seconds
+[2022-12-17 05:33:52,920] {processor.py:163} INFO - Started process (PID=310) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:33:52,923] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:33:52,925] {logging_mixin.py:109} INFO - [2022-12-17 05:33:52,925] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:33:53,199] {processor.py:654} INFO - DAG(s) dict_keys(['scheduler_dag']) retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:33:53,228] {logging_mixin.py:109} INFO - [2022-12-17 05:33:53,228] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-12-17 05:33:53,284] {logging_mixin.py:109} INFO - [2022-12-17 05:33:53,284] {dag.py:2935} INFO - Setting next_dagrun for scheduler_dag to 2022-12-11T00:00:00+00:00
+[2022-12-17 05:33:53,311] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.397 seconds
+[2022-12-17 05:34:23,511] {processor.py:163} INFO - Started process (PID=327) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:34:23,515] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:34:23,517] {logging_mixin.py:109} INFO - [2022-12-17 05:34:23,517] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:34:23,764] {processor.py:654} INFO - DAG(s) dict_keys(['scheduler_dag']) retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:34:23,792] {logging_mixin.py:109} INFO - [2022-12-17 05:34:23,792] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-12-17 05:34:23,848] {logging_mixin.py:109} INFO - [2022-12-17 05:34:23,847] {dag.py:2935} INFO - Setting next_dagrun for scheduler_dag to 2022-12-11T00:00:00+00:00
+[2022-12-17 05:34:23,871] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.366 seconds
+[2022-12-17 05:34:27,588] {processor.py:163} INFO - Started process (PID=336) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:34:27,593] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:34:27,596] {logging_mixin.py:109} INFO - [2022-12-17 05:34:27,596] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:34:27,879] {processor.py:654} INFO - DAG(s) dict_keys(['scheduler_dag']) retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:34:27,909] {logging_mixin.py:109} INFO - [2022-12-17 05:34:27,909] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-12-17 05:34:27,974] {logging_mixin.py:109} INFO - [2022-12-17 05:34:27,974] {dag.py:2935} INFO - Setting next_dagrun for scheduler_dag to 2022-12-11T00:00:00+00:00
+[2022-12-17 05:34:28,009] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.428 seconds
+[2022-12-17 05:34:58,209] {processor.py:163} INFO - Started process (PID=363) to work on /opt/airflow/dags/scheduler.py
+[2022-12-17 05:34:58,216] {processor.py:642} INFO - Processing file /opt/airflow/dags/scheduler.py for tasks to queue
+[2022-12-17 05:34:58,218] {logging_mixin.py:109} INFO - [2022-12-17 05:34:58,218] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:34:58,495] {logging_mixin.py:109} INFO - [2022-12-17 05:34:58,486] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/scheduler.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown MySQL server host 'warehouse' (-2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/scheduler.py", line 17, in <module>
+    connection = mysql.connector.connect(user=user, password=password, host=host, port=port, database=database, auth_plugin='mysql_native_password')
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1014, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection_cext.py", line 242, in _open_connection
+    sqlstate=exc.sqlstate)
+mysql.connector.errors.DatabaseError: 2005 (HY000): Unknown MySQL server host 'warehouse' (-2)
+[2022-12-17 05:34:58,522] {processor.py:690} INFO - Deactivated 1 DAGs which are no longer present in /opt/airflow/dags/scheduler.py
+[2022-12-17 05:34:58,523] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/scheduler.py
+[2022-12-17 05:34:58,543] {processor.py:171} INFO - Processing /opt/airflow/dags/scheduler.py took 0.339 seconds

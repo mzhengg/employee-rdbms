@@ -1,0 +1,22 @@
+[2022-12-17 05:32:04,832] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.data_generator_task scheduled__2022-12-04T00:00:00+00:00 [queued]>
+[2022-12-17 05:32:04,873] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: scheduler_dag.data_generator_task scheduled__2022-12-04T00:00:00+00:00 [queued]>
+[2022-12-17 05:32:04,874] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 05:32:04,876] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-12-17 05:32:04,877] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17 05:32:04,926] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): data_generator_task> on 2022-12-04 00:00:00+00:00
+[2022-12-17 05:32:04,936] {standard_task_runner.py:52} INFO - Started process 241 to run task
+[2022-12-17 05:32:04,951] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'scheduler_dag', 'data_generator_task', 'scheduled__2022-12-04T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/scheduler.py', '--cfg-path', '/tmp/tmpld0z81td', '--error-file', '/tmp/tmpvui2dz3t']
+[2022-12-17 05:32:04,961] {standard_task_runner.py:77} INFO - Job 3: Subtask data_generator_task
+[2022-12-17 05:32:05,131] {logging_mixin.py:109} INFO - Running <TaskInstance: scheduler_dag.data_generator_task scheduled__2022-12-04T00:00:00+00:00 [running]> on host 74d73c162c9e
+[2022-12-17 05:32:05,289] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=scheduler_dag
+AIRFLOW_CTX_TASK_ID=data_generator_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-04T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-04T00:00:00+00:00
+[2022-12-17 05:32:05,293] {python.py:175} INFO - Done. Returned value was: None
+[2022-12-17 05:32:05,334] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=scheduler_dag, task_id=data_generator_task, execution_date=20221204T000000, start_date=20221217T053204, end_date=20221217T053205
+[2022-12-17 05:32:05,402] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-12-17 05:32:05,495] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

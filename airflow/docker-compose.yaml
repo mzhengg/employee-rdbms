@@ -277,7 +277,7 @@ services:
 
 networks:
   default:
-    name: default
+    name: erdbms_default
     external: true
 
 volumes:

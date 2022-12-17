@@ -1,3 +1,7 @@
+/* create airflow user */
+CREATE USER 'airflow'@'%';
+GRANT ALL PRIVILEGES ON *.* TO 'airflow'@'%' WITH GRANT OPTION;
+
 /* create tables */
 CREATE TABLE WAREHOUSE.EMPLOYEE (
   /* variables */

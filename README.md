@@ -389,13 +389,13 @@ docker compose up airflow-init
 
 - Connect the Airflow DAG to the Database using a Docker network:
     
-    - Now add the following to the `docker-compose.yml` file in the `airflow` directory: (when the docker-compose.yml for the interface and warehouse is run, a `default` network is created that we can add to this docker-compose.yml as an external network)
+    - Now add the following to the `docker-compose.yml` file in the `airflow` directory: (when the docker-compose.yml for the interface and warehouse is run, a `erdbms_default` network is created that we can add to this docker-compose.yml as an external network)
 
         - Enter the following below `services`:
         ```bash
         networks:
             default:
-                name: default
+                name: erdbms_default
                 external: true
         ```
 
