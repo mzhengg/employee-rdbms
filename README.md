@@ -39,6 +39,7 @@ The database has been populated with dummy data. So, feel free to experiment wit
 * Docker
 * Python (mysql-connector-python)
 * Airflow
+* Spark (PySpark)
 
 ## Overview of Docker
 
@@ -75,6 +76,27 @@ Worker: This component executes the tasks given by the scheduler.
 Metadata Database (Postgres): Backend to the Airflow environment. Used by the Scheduler, Executor and Webserver to store state.  
 
 DAG Directory: Location for storing all DAGs.  
+
+## Overview of Spark
+
+Spark is a data processing framework that can quickly perform processing tasks on very large datasets, and can also distribute data processing tasks across multiple computers, either on its own or in tandem with other distributed computing tools.
+
+### General Architecture:
+
+- Write Spark code on computer
+- Code is submitted to Spark master
+- Spark master coordinates between executors to perform Spark jobs
+- The executors pull data partitions from the data repositories, processes it, and writes the results to a location  
+
+Spark is distributed so it can have a cluster, and within the cluster there can be many machines that work together to process the data in parallel  
+
+Spark is a multi-language engine. Scala is the native way of communicating with Spark. PySpark is a wrapper around Spark.  
+
+General rule of thumb: If the data can be expressed using SQL and regular data processing frameworks like pandas can manipulate the data reasonably fast, then use it. Otherwise, Spark is the way to go.  
+
+Hadoop is different because it stores the data on the executors (with redundancy in case a node fails). The idea was to not download data because it was slow due to their large size. Instead code, which is smaller in size, is sent to the executors that already have the data to do the processing.  
+
+But these days, Spark clusters and data centers live together. So downloading data is very fast. Despite Spark being a little bit slower than Hadoop, it is not significant and has more upsides.
 
 ## Database Principles
 
@@ -452,3 +474,33 @@ docker compose up airflow-init
     - Airflow Webserver UI will be accessible at: http://localhost:8080/. Username = `airflow` and Password = `airflow`
 
     - Trigger the DAG
+
+## How to Generate Reports Using Spark
+
+- Run the PySpark container (download from Docker Hub) and connect to RDBMS network
+```bash
+docker run -p 8888:8888 \
+    --name=spark_reports \
+    --network=erdbms_default \
+    jupyter/pyspark-notebook
+```
+
+- Copy Jupyter notebook to container
+```bash
+docker cp ./spark/reports.ipynb spark_reports:./home/jovyan/
+```
+
+- Go to the URL at the end of the prompt to access the server
+
+- Run the entire notebook
+
+- Reports will be located in ./work/data/ (download if needed)
+
+- Use Control-C to stop this server and shut down all kernels (twice to skip confirmation)
+
+- Destroy image and container
+```bash
+docker kill spark_reports
+docker rm spark_reports
+docker image rm jupyter/pyspark-notebook
+```
