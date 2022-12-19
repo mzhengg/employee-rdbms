@@ -41,6 +41,8 @@ The database has been populated with dummy data. So, feel free to experiment wit
 * Airflow
 * Spark (PySpark)
 
+![My_Image](diagram.jpg)
+
 ## Overview of Docker
 
 Docker is a platform that enables developers to build, deploy, run, update, and manage containers. Containers are a package of software that includes everything needed to run an application: code, dependencies, etc. Containers are isolated from each other and can be ran in different environments (Windows, macOS, GCP, etc.). They allow reproducibility, local experiments, and running pipelines on the cloud.
